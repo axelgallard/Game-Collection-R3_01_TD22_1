@@ -14,11 +14,15 @@
                         <li id="rightSide"><a id="pad" href="profil.php">Profil</a></li> 
                         <li id="rightSide"><a id="pad" href="classement.php">Classement</a></li>
                         <li id="rightSide"><a id="pad" href="ajouterUnJeu.php">Ajouter un jeu</a></li>
-                        <li id="rightSide"><a id="pad" href="bibliotheque.php"><u>Ma Bibliothèque</u></a></li>
-                        
-                        
-                        
+                        <li id="rightSide"><a id="pad" href="bibliotheque.php"><u>Ma Bibliothèque</u></a></li>   
         </ul>
     </div>
+
+    <div class="zoneImg">
+        <h1>Salut <?php echo $prenom ?> ! <br>
+        PRÊT À AJOUTER DES JEUX A TA COLLECTION ?
+        </h1>
+    </div>
+
 </body>
 </html>
