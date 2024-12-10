@@ -1,0 +1,16 @@
+{
+    "name": "i2300645/game-collection-r3_01_td22_1",
+    "description": "oui",
+    "autoload": {
+        "psr-4": {
+            "I2300645\\GameCollectionR301Td221\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "axelgallard",
+            "email": "90622695+axelgallard@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}

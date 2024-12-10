@@ -1,8 +1,26 @@
 <?php
+	session_start();
+	var_dump($_SESSION);
+	var_dump($_POST);
+	//unset($_SESSION["id"]);
 	include 'models/model.php';
 	include 'controllers/controller.php';
 
-	$articlesController = new ArticleController(new ModelArticle);
+	$controller = new Controller(new Model);
 
-	$articlesController->index();
+	
+
+	if (isset($_POST["page"])){
+		if ($_POST["page"]=="connection"){
+			if (!isset($_SESSION["id"])){
+				$controller->connection();
+			}else{
+				$controller->index();	
+			}
+		}else{
+			$controller->index();
+		}
+	}else{
+		$controller->index();
+	}
 ?>

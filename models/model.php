@@ -1,5 +1,5 @@
 <?php
-class ModelArticle{
+class Model{
     private $db;
 
     public function __construct() {
@@ -13,3 +13,4 @@ class ModelArticle{
         $this->db = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8;", $username, $password);
     }
 }
+?>

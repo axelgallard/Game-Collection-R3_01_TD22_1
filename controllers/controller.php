@@ -1,14 +1,19 @@
 <?php
 
-class ArticleController{
+class Controller{
 
-    private ModelArticle $modelArticle;
+    private Model $model;
 
-    public function __construct($modelArticle) {
-        $this->modelArticle = $modelArticle;
+    public function __construct($model) {
+        $this->model = $model;
     }
 
     public function index() {
         include 'views/main.php';
     }
+
+    public function connection() {
+        include 'views/connection.php';
+    }
 }
+?>
