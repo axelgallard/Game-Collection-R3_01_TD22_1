@@ -15,5 +15,9 @@ class Controller{
     public function connection() {
         include 'views/connection.php';
     }
+
+    public function bibliotheque() {
+        include 'views/bibliotheque.php';
+    }
 }
 ?>
