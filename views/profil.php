@@ -6,3 +6,7 @@
     $infos=$model->getInfoUtilisateur($_SESSION['id']);
     var_dump($infos);
 ?>
+<form method="POST">
+    <input type="hidden" id="page" name="page" value="profil">
+    <button type="submit">Déconnexion</button>
+</form>
