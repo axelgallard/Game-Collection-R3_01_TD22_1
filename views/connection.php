@@ -11,7 +11,7 @@
             $_SESSION['id']=$id;
         }
         echo $id;
-        //header("Refresh:0");
+        header("Refresh:0");
     }
 ?>
 
