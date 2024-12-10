@@ -17,6 +17,11 @@ class Controller{
         include 'views/connection.php';
     }
 
+    public function profil() {
+        $model=$this->model;
+        include 'views/profil.php';
+    }
+
     public function bibliotheque() {
         include 'views/bibliotheque.php';
     }

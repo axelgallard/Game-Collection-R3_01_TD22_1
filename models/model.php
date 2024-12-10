@@ -25,5 +25,13 @@ class Model{
             return -1;
         }
     }
+
+    public function getInfoUtilisateur($id){
+        $stmt=$this->db->prepare("SELECT * FROM utilisateur WHERE id_Uti=:id;");
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        $result=$stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
 }
 ?>

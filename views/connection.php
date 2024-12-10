@@ -1,8 +1,4 @@
 <?php
-    if($model){
-        echo 'OKKKKK';
-    }
-
     if (isset($_POST['mail']) && isset($_POST['mdp'])){
         $id=$model->getId($_POST['mail'],$_POST['mdp']);
         if ($id==-1){
