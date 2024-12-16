@@ -25,10 +25,17 @@ class Model{
             return -1;
         }
     }
-
+    
     public function getInfoUtilisateur($id){
         $stmt=$this->db->prepare("SELECT * FROM utilisateur WHERE IdUti=:id;");
         $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        $result=$stmt->fetch(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    public function getLstJeux(){
+        $stmt=$this->db->prepare("SELECT * FROM jeu");
         $stmt->execute();
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
         return $result;

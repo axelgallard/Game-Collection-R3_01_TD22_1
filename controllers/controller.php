@@ -25,5 +25,9 @@ class Controller{
     public function bibliotheque() {
         include 'views/bibliotheque.php'; 
     }
+
+    public function listeJeux() {
+        include 'views/listeJeux.php';
+    }
 }
 ?>
