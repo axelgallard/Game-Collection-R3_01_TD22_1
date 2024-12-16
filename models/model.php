@@ -26,6 +26,15 @@ class Model{
         }
     }
     
+    public function getListeJeuByID($id){
+        $stmt=$this->db->prepare("SELECT * FROM bibliotheque INNER JOIN JEU ON bibliotheque.NomJeu=jeu.NomJeu WHERE IdUti=:id;");
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+        $liste=array();
+        //TODO faire la boucle qui créer un objet et la renvoie la liste
+        return $liste;
+    }
+
     public function getInfoUtilisateur($id){
         $stmt=$this->db->prepare("SELECT * FROM utilisateur WHERE IdUti=:id;");
         $stmt->bindParam(':id', $id);
@@ -37,8 +46,7 @@ class Model{
     public function getLstJeux(){
         $stmt=$this->db->prepare("SELECT * FROM jeu");
         $stmt->execute();
-        $result=$stmt->fetch(PDO::FETCH_ASSOC);
-        return $result;
+        return $stmt;
     }
 }
 
