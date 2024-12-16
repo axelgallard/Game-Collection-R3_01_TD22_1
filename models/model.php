@@ -98,13 +98,13 @@ class User{
 
 class Jeu{
 
-    private $nomJeu
-    private $editeurJeu
-    private $dateSortieJeu
-    private $plateformes
-    private $descriptionJeu
-    private $urlCover
-    private $urlSite
+    private $nomJeu;
+    private $editeurJeu;
+    private $dateSortieJeu;
+    private $plateformes;
+    private $descriptionJeu;
+    private $urlCover;
+    private $urlSite;
 
     public function __construct($nomJeu, $editeurJeu, $dateSortieJeu, $plateformes, $descriptionJeu, $urlCover, $urlSite) {
         $this->nomJeu = $nomJeu;
