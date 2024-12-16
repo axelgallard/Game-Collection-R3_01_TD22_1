@@ -14,24 +14,47 @@ class Model{
     }
 
     public function getId($mail,$mdp){
-        $stmt=$this->db->prepare("SELECT Id_Uti, MDP_Uti FROM utilisateur WHERE Email_Uti LIKE :mail;");
+        $stmt=$this->db->prepare("SELECT IdUti, MDPUti FROM utilisateur WHERE EmailUti LIKE :mail;");
         $stmt->bindParam(':mail', $mail);
         $stmt->execute();
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
-        $mdpUti=$result['MDP_Uti'];
+        $mdpUti=$result['MDPUti'];
         if(password_verify($mdp, $mdpUti)){
-            return $result['Id_Uti'];
+            return $result['IdUti'];
         }else{
             return -1;
         }
     }
 
     public function getInfoUtilisateur($id){
-        $stmt=$this->db->prepare("SELECT * FROM utilisateur WHERE Id_Uti=:id;");
+        $stmt=$this->db->prepare("SELECT * FROM utilisateur WHERE IdUti=:id;");
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
+    }
+}
+
+class User{
+    int $idUti;
+    String $nomUti;
+    String $prenUti;
+    String $emailUti;
+
+
+    public function __construct(idUti) {
+        $selectStmt = $conn->prepare("SELECT * FROM utilisateur WHERE IdUti = :idUti;");
+        $selectStmt->bindParam(':idUti', idUti);
+        $selectStmt->execute();
+        $selectStmt->setFetchMode(PDO::FETCH_ASSOC);
+
+        $val=$resultat->fetch(PDO::FETCH_ASSOC);
+
+        $idUti = $val['IdUti'];
+        $nomUti = $val['NomUti'];
+        $prenUti = $val['PrenUti']
+        $emailUti = $val['EmailUti']
+        
     }
 }
 ?>
