@@ -2,7 +2,9 @@
 	session_start();
 	var_dump($_SESSION);
 	var_dump($_POST);
-	//unset($_SESSION["id"]);
+	if (isset($_POST["deco"])){
+		unset($_SESSION["id"]);
+	}
 	require_once 'vendor/autoload.php';
 	include 'models/model.php';
 	include 'controllers/controller.php';

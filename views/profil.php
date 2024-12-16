@@ -8,5 +8,6 @@
 ?>
 <form method="POST">
     <input type="hidden" id="page" name="page" value="profil">
+    <input type="hidden" id="deco" name="deco" value="deco">
     <button type="submit">Déconnexion</button>
 </form>

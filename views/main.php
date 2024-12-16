@@ -16,5 +16,10 @@
 			<input type="hidden" id="page" name="page" value="bibliotheque">
             <button type="submit">Bibliothèque</button>
         </form>
+
+		<form method="POST">
+			<input type="hidden" id="page" name="page" value="bibliotheque">
+            <button type="submit">Bibliothèque</button>
+        </form>
 	</body>
 </html>
