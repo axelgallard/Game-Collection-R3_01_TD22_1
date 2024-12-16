@@ -18,8 +18,8 @@
         </form>
 
 		<form method="POST">
-			<input type="hidden" id="page" name="page" value="bibliotheque">
-            <button type="submit">Bibliothèque</button>
+			<input type="hidden" id="page" name="page" value="listeJeux">
+            <button type="submit">Liste jeux</button>
         </form>
 	</body>
 </html>
