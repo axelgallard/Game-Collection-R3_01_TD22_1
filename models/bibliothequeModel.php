@@ -1,5 +1,5 @@
 <?php
-getPrenom(id){
+getPrenom(id)
     $env = parse_ini_file('.env', true);
 
         $hostname =  $env['DB_HOST'];
