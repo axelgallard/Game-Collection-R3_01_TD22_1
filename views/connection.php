@@ -4,10 +4,14 @@
         if ($id==-1){
             unset($_SESSION['id']);
         }else{
-            $_SESSION['id']=$id;
+            $_SESSION['user'] = new User($id);
+            echo $_SESSION['user']->getNomUti();
+            
+            
         }
-        echo $id;
-        header("Refresh:0");
+        
+        
+        //header("Refresh:0");
     }
 ?>
 

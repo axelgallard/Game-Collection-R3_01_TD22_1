@@ -1,7 +1,7 @@
 <?php
 	session_start();
-	var_dump($_SESSION);
-	var_dump($_POST);
+	//var_dump($_SESSION);
+	//var_dump($_POST);
 	//unset($_SESSION["id"]);
 	require_once 'vendor/autoload.php';
 	include 'models/model.php';

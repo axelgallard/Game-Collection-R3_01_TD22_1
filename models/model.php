@@ -36,25 +36,48 @@ class Model{
 }
 
 class User{
-    int $idUti;
-    String $nomUti;
-    String $prenUti;
-    String $emailUti;
+     public $idUti;
+     public $nomUti;
+     public $prenUti;
+     public $emailUti;
 
 
-    public function __construct(idUti) {
+    public function __construct($idUti) {
+        $env = parse_ini_file('.env', true);
+        $hostname =  $env['DB_HOST'];
+        $dbname = $env['DB_NAME'];
+        $username = $env['DB_USER'];
+        $password = $env['DB_PASSWORD'];
+
+        $conn = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8;", $username, $password);
+
         $selectStmt = $conn->prepare("SELECT * FROM utilisateur WHERE IdUti = :idUti;");
-        $selectStmt->bindParam(':idUti', idUti);
+        $selectStmt->bindParam(':idUti', $idUti);
         $selectStmt->execute();
         $selectStmt->setFetchMode(PDO::FETCH_ASSOC);
 
-        $val=$resultat->fetch(PDO::FETCH_ASSOC);
-
-        $idUti = $val['IdUti'];
-        $nomUti = $val['NomUti'];
-        $prenUti = $val['PrenUti']
-        $emailUti = $val['EmailUti']
+        $val=$selectStmt->fetch(PDO::FETCH_ASSOC);
+        
+        $this->idUti = $val['IdUti'];
+        $this->nomUti = $val['NomUti'];
+        $this->prenUti = $val['PrenUti'];
+        $this->emailUti = $val['EmailUti'];
         
     }
+
+    public function getNomUti(){
+        return $this->nomUti;
+    }
+    public function getPrenomUti(){
+        return $this->prenUti;
+    }
+    public function getEmailUti(){
+        return $this->emailUti;
+    }
+    public function getIdUti(){
+        return $this->emailUti;
+    }
+    
+
 }
 ?>
