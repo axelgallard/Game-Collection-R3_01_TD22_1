@@ -43,10 +43,10 @@ class Model{
 }
 
 class User{
-     public $idUti;
-     public $nomUti;
-     public $prenUti;
-     public $emailUti;
+    private $idUti;
+    private $nomUti;
+    private $prenUti;
+    private $emailUti;
 
 
     public function __construct($idUti) {
@@ -87,4 +87,27 @@ class User{
     
 
 }
+
+class Jeu{
+
+    private $nomJeu
+    private $editeurJeu
+    private $dateSortieJeu
+    private $plateformes
+    private $descriptionJeu
+    private $urlCover
+    private $urlSite
+
+    public function __construct($nomJeu, $editeurJeu, $dateSortieJeu, $plateformes, $descriptionJeu, $urlCover, $urlSite) {
+        $this->nomJeu = $nomJeu;
+        $this->editeurJeu = $editeurJeu;
+        $this->dateSortieJeu = $dateSortieJeu;
+        $this->plateformes = $plateformes;
+        $this->descriptionJeu = $descriptionJeu;
+        $this->urlCover = $urlCover;
+        $this->urlSite = $urlSite;
+    }
+    //TODO: getters, setters? , potentielles autres fonctions de la classe
+}
+
 ?>
