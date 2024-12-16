@@ -14,20 +14,20 @@ class Model{
     }
 
     public function getId($mail,$mdp){
-        $stmt=$this->db->prepare("SELECT id_Uti,MDP_Uti FROM utilisateur WHERE Email_Uti LIKE :mail;");
+        $stmt=$this->db->prepare("SELECT Id_Uti, MDP_Uti FROM utilisateur WHERE Email_Uti LIKE :mail;");
         $stmt->bindParam(':mail', $mail);
         $stmt->execute();
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
         $mdpUti=$result['MDP_Uti'];
         if(password_verify($mdp, $mdpUti)){
-            return $result['id_Uti'];
+            return $result['Id_Uti'];
         }else{
             return -1;
         }
     }
 
     public function getInfoUtilisateur($id){
-        $stmt=$this->db->prepare("SELECT * FROM utilisateur WHERE id_Uti=:id;");
+        $stmt=$this->db->prepare("SELECT * FROM utilisateur WHERE Id_Uti=:id;");
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         $result=$stmt->fetch(PDO::FETCH_ASSOC);
