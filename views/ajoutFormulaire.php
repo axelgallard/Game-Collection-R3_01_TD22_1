@@ -47,7 +47,7 @@
                 <p>Mobile</p>
                 <input type="checkbox" id="Mobile" name="Mobile" checked="false">
             </div>
-
+            <!-- Pas fini-->
             <input type="hidden" id="AjoutJeu" name="AjoutJeu" value="AjoutJeu">
             <input type="hidden" id="page" name="page" value="listeJeux">
             <button type="submit">Ajouter le jeu</button>
