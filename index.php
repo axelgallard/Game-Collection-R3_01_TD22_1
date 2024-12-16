@@ -18,6 +18,8 @@
 			}
 		}else if ($_POST["page"]=="profil"){
 			$controller->profil();
+		} else if ($_POST["page"]=="bibliotheque"){
+			$controller->bibliotheque();
 		}
 		else{
 			$controller->index();
