@@ -23,7 +23,7 @@ class Controller{
     }
 
     public function bibliotheque() {
-        include 'views/bibliotheque.php';
+        include 'views/bibliotheque.php'; 
     }
 }
 ?>
