@@ -27,6 +27,7 @@ class Controller{
     }
 
     public function listeJeux() {
+        $model=$this->model;
         include 'views/listeJeux.php';
     }
 }

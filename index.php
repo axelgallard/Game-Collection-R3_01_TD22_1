@@ -24,7 +24,9 @@
 		} else if ($_POST["page"]=="bibliotheque"){
 			$controller->bibliotheque();
 		}
-		else{
+		else if($_POST["page"]=="listeJeux"){
+			$controller->listeJeux();
+		}else{
 			$controller->index();
 		}
 	}else{
