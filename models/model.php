@@ -41,4 +41,27 @@ class Model{
         return $result;
     }
 }
+
+class User{
+    int $idUti;
+    String $nomUti;
+    String $prenUti;
+    String $emailUti;
+
+
+    public function __construct(idUti) {
+        $selectStmt = $conn->prepare("SELECT * FROM utilisateur WHERE IdUti = :idUti;");
+        $selectStmt->bindParam(':idUti', idUti);
+        $selectStmt->execute();
+        $selectStmt->setFetchMode(PDO::FETCH_ASSOC);
+
+        $val=$resultat->fetch(PDO::FETCH_ASSOC);
+
+        $idUti = $val['IdUti'];
+        $nomUti = $val['NomUti'];
+        $prenUti = $val['PrenUti']
+        $emailUti = $val['EmailUti']
+        
+    }
+}
 ?>
