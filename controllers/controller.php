@@ -14,7 +14,7 @@ class Controller{
 
     public function connection() {
         $model=$this->model;
-        include 'views/connection.php';
+        include 'views/connexion.php';
     }
 
     public function profil() {
