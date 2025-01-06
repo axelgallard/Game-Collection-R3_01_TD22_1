@@ -17,6 +17,11 @@ class Controller{
         include 'views/connexion.php';
     }
 
+    public function inscription(){
+        $model=$this->model;
+        include 'views/inscription.php';
+    }
+
     public function profil() {
         $model=$this->model;
         include 'views/profil.php';

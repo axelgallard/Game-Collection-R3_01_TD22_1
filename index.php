@@ -19,7 +19,10 @@
 			}else{
 				$controller->index();	
 			}
-		}else if ($_POST["page"]=="profil"){
+		}else if ($_POST["page"]=="inscription"){
+			$controller->inscription();
+		}
+		else if ($_POST["page"]=="profil"){
 			$controller->profil();
 		} else if ($_POST["page"]=="bibliotheque"){
 			$controller->bibliotheque();

@@ -5,9 +5,7 @@
             unset($_SESSION['id']);
         }else{
             $_SESSION['id']=$id;
-            $_SESSION['user'] = new User($id);
-            
-            
+            $_SESSION['user'] = new User($id);            
         }
         header("Refresh:0");
     
@@ -15,12 +13,28 @@
 ?>
 
 <html>
-    <div id="connection">
-        <form method="POST">
-            <input name="mail" id="mail" type="text" placeholder="E-Mail">
-            <input name="mdp" id="mdp" type="text" placeholder="MDP">
-            <input type="hidden" id="page" name="page" value="connection">
-            <button type="submit">Se connecter</button>
-        </form>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/connexion.css">
+        <title>Connexion</title>
+    </head>
+
+    <body>
+        <link rel="stylesheet" href="styles.css">
+        <div id="connection">
+            <form method="POST">
+                <input name="mail" id="mail" type="text" placeholder="E-Mail">
+                <input name="mdp" id="mdp" type="text" placeholder="MDP">
+                <input type="hidden" id="page" name="page" value="connection">
+                <button type="submit" class="connection-button">Se connecter</button>
+            </form>
+            <form method="post" action="">
+                <input type="hidden" name="page" value="inscription">
+                <button type="submit" class="inscription-button">S'inscrire</button>
+            </form>
+        </div>
+        <!-- TODO faire le footer-->
+        <footer></footer>
+    </body>
 </html>
