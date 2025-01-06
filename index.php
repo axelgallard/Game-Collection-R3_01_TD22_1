@@ -33,7 +33,28 @@
 					$controller->ajoutFormError();
 				}
 				else{
-					$controller->ajoutForm();
+					$platforme = '';
+        			if($_POST["PC"] == true){
+						$platforme = $platforme + "PC ";
+					}
+
+					if($_POST["Xbox"] == true){
+						$platforme = $platforme + "Xbox ";
+					}
+
+					if($_POST["Playstation"] == true){
+						$platforme = $platforme + "Playstation ";
+					}
+
+					if($_POST["Nintendo"] == true){
+						$platforme = $platforme + "Nintendo ";
+					}
+					
+					if($_POST["Mobile"] == true){
+						$platforme = $platforme + "Mobile";
+					}
+					
+					$controller->ajoutForm($platforme);
 				}
 			}
 			else{

@@ -40,8 +40,8 @@ class Controller{
         include 'views/ajoutJeux.php';
     }
 
-    public function ajoutForm() {
-        $this->model->ajoutForm();
+    public function ajoutForm($platforme) {
+        $this->model->ajoutForm($platforme);
     }
 }
 ?>
