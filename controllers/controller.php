@@ -35,5 +35,9 @@ class Controller{
         $model=$this->model;
         include 'views/listeJeux.php';
     }
+
+    public function ajoutJeu() {
+        include 'views/ajoutJeux.php';
+    }
 }
 ?>

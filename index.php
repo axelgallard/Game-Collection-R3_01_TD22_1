@@ -21,14 +21,24 @@
 			}
 		}else if ($_POST["page"]=="inscription"){
 			$controller->inscription();
-		}
-		else if ($_POST["page"]=="profil"){
+		}else if ($_POST["page"]=="profil"){
 			$controller->profil();
 		} else if ($_POST["page"]=="bibliotheque"){
 			$controller->bibliotheque();
 		}
 		else if($_POST["page"]=="listeJeux"){
-			$controller->listeJeux();
+			if($_POST["AjoutJeu"]=="AjoutJeu"){
+				if($_POST["PC"]==false && $_POST["Xbox"]==false && $_POST["Playstation"]==false && $_POST["Nintendo"]==false && $_POST["Mobile"]==false){
+					echo 'ERREUR FDP';
+					$controller->ajoutJeu();
+				}
+				else{
+
+				}
+			}
+			else{
+				$controller->listeJeux();
+			}		
 		}else{
 			$controller->index();
 		}

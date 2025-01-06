@@ -8,7 +8,7 @@
     </head>
     <body>
         <!-- NAVBAR -->
-        
+        <?php require_once('navBar.php') ?>
         <!--        -->
         <h1>Ajouter un jeu a sa bibliothèque</h1>
         <p>Le jeu que vous souhaiter ajouter n'existe pas ! Vous pouvez le créer, celui-ci sera automatiquement ajouter a votre bibliothèque !</p>
@@ -32,24 +32,23 @@
                 }
             ?>
             <div id="checkbox">
-                <p>PC</p>
-                <input type="checkbox" id="PC" name="PC" checked="false">
+                <p><input type="checkbox" id="PC" name="PC"> PC</p>
                 
-                <p>Xbox</p>
-                <input type="checkbox" id="Xbox" name="Xbox" checked="false">
+                <p><input type="checkbox" id="Xbox" name="Xbox"> Xbox</p>
                 
-                <p>Playstation</p>
-                <input type="checkbox" id="Playstation" name="Playstation" checked="false">
+                <p><input type="checkbox" id="Playstation" name="Playstation">Playstation</p>
                 
-                <p>Nintendo</p>
-                <input type="checkbox" id="Nintendo" name="Nintendo" checked="false">
+                <p><input type="checkbox" id="Nintendo" name="Nintendo">Nintendo</p>
 
-                <p>Mobile</p>
-                <input type="checkbox" id="Mobile" name="Mobile" checked="false">
+                <p><input type="checkbox" id="Mobile" name="Mobile">Mobile</p>
             </div>
-            <!-- Pas fini-->
             <input type="hidden" id="AjoutJeu" name="AjoutJeu" value="AjoutJeu">
             <input type="hidden" id="page" name="page" value="listeJeux">
+
+            <!-- Crée un $_POST['Error'] qui permet de d'afficher une erreur si on revien directment sur cette page-->
+            <input type="hidden" id="Error" name="Error" value="Error"> 
+            
+            <!-- Pas fini-->
             <button type="submit">Ajouter le jeu</button>
         </form>
 
