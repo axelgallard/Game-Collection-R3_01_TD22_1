@@ -21,7 +21,7 @@
             <input type="text" id="Editeur du jeu" name="Editeur du jeu" value="" placeholder="Editeur du jeu" require>
 
             <p>Sortie du jeu</p>
-            <input type="date" id="Nom du jeu" name="Nom du jeu" value="" require>
+            <input type="date" id="Sortie du jeu" name="Sortie du jeu" value="" require>
 
             <p>Platfromes</p>
             <?php 

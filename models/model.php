@@ -48,6 +48,14 @@ class Model{
         $stmt->execute();
         return $stmt;
     }
+
+    public function ajoutJeu(){
+        $stmt=$this->db->prepare("INSERT INTO jeu(NomJeu, CreateurJeu, PlatformeJeu, DescJeu, DateSortie, CouvertureJeu, URLSite) 
+        VALUES(".$_POST['Nom du jeu'].", ".$_POST['Editeur du jeu'].", ".'A FAIRE PLATFORME'.", ".$_POST['DescJeu'].", ".$_POST['Sortie du jeu'].", ".$_POST['CouvertureJeu'].", ".$_POST['URLSite'].", )");
+        
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+    }
 }
 
 class User{

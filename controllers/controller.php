@@ -36,8 +36,12 @@ class Controller{
         include 'views/listeJeux.php';
     }
 
-    public function ajoutJeu() {
+    public function ajoutJeuError() {
         include 'views/ajoutJeux.php';
+    }
+
+    public function ajoutJeu() {
+        $this->model->ajoutJeu();
     }
 }
 ?>
