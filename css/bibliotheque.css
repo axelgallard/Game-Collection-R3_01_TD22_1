@@ -1,0 +1,33 @@
+html, body 
+{
+    height: 100%;
+    margin: 0;
+    background-color: #281c2c;
+}
+
+*
+{
+    
+    color: white;
+    margin: 0; 
+}
+
+#zoneImg
+{
+    width: 100%;
+    height : 35%;
+    
+    background-image: url('../ressources/bgBibliotheque.png');
+    background-repeat: no-repeat; 
+    background-position: center; 
+
+    display: flex;
+    align-items: center;
+}
+
+#zoneImg h1
+{
+    margin-left : 10%;
+
+}
+
