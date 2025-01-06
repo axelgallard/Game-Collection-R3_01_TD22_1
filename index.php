@@ -30,11 +30,7 @@
 			if($_POST["AjoutJeu"]=="AjoutJeu"){
 				if($_POST["PC"]==false && $_POST["Xbox"]==false && $_POST["Playstation"]==false && $_POST["Nintendo"]==false && $_POST["Mobile"]==false){
 					echo 'ERREUR FDP';
-<<<<<<< Updated upstream
 					$controller->ajoutJeu();
-=======
-					$controller->ajoutJeuError();
->>>>>>> Stashed changes
 				}
 				else{
 
