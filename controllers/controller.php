@@ -36,8 +36,13 @@ class Controller{
         include 'views/listeJeux.php';
     }
 
+<<<<<<< Updated upstream
     public function ajoutJeu() {
         include 'views/ajoutJeux.php';
+=======
+    public function ajoutJeuError() {
+        
+>>>>>>> Stashed changes
     }
 }
 ?>
