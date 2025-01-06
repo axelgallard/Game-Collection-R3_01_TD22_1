@@ -55,3 +55,11 @@ a:hover {
 .inscription-button:hover {
     text-decoration: underline; /* Texte souligné */
 }
+
+p{
+    margin: 0;
+}
+
+#error{
+    color:red;
+}
