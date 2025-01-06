@@ -48,8 +48,6 @@ class Model{
         $stmt->execute();
         return $stmt;
     }
-
-<<<<<<< Updated upstream
     public function ajoutForm($plateformes){
         $stmt=$this->db->prepare("INSERT INTO jeu(NomJeu, CreateurJeu, PlatformeJeu, DescJeu, DateSortie, CouvertureJeu, URLSite) 
         VALUES(:Nom, :Editeur, ".$plateformes.", :Desc ".$_POST['Sortie du jeu'].", :Couv, :URL )");
@@ -66,8 +64,7 @@ class Model{
         
         $stmt2->bindParam(':Nom', $_POST['Nom du jeu']);
         $stmt2->execute();
-
-=======
+    }
     public function addresseMailLibre($mail){
         $stmt=$this->db->prepare("SELECT IdUti FROM utilisateur WHERE EmailUti LIKE :mail;");
         $stmt->bindParam(':mail', $mail);
@@ -83,7 +80,6 @@ class Model{
         $stmt->bindParam(':mail', $mail);
         $stmt->bindParam(':mdp', password_hash($mdp,PASSWORD_DEFAULT));
         $stmt->execute();
->>>>>>> Stashed changes
     }
 }
 
