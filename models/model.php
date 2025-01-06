@@ -49,7 +49,7 @@ class Model{
         return $stmt;
     }
 
-    public function ajoutJeu(){
+    public function ajoutForm(){
         $stmt=$this->db->prepare("INSERT INTO jeu(NomJeu, CreateurJeu, PlatformeJeu, DescJeu, DateSortie, CouvertureJeu, URLSite) 
         VALUES(".$_POST['Nom du jeu'].", ".$_POST['Editeur du jeu'].", ".'A FAIRE PLATFORME'.", ".$_POST['DescJeu'].", ".$_POST['Sortie du jeu'].", ".$_POST['CouvertureJeu'].", ".$_POST['URLSite'].", )");
         
