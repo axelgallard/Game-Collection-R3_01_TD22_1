@@ -1,0 +1,29 @@
+body {
+    background-color: #211F2A; /* Fond noir */
+    color: white; /* Couleur du texte blanche */
+    font-family: Arial, sans-serif; /* Police de caractères */
+    height: 100vh; /* Hauteur de la fenêtre */
+    margin: 0; /* Supprimer les marges par défaut */
+}
+
+table {
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+    border-collapse: collapse; /* Pour éviter les doubles bordures */
+}
+
+th {
+    padding: 10px; /* Ajoutez un peu d'espace autour du texte */
+    text-align: left; /* Alignez le texte à gauche */
+}
+
+tr:nth-child(odd) {
+    background-color: #211F2A; /* Couleur pour les lignes impaires */
+}
+
+tr:nth-child(even) {
+    background-color: #262836; /* Couleur pour les lignes paires */
+}
+
+.classement{
+    margin: 0 10% 0 10%;
+}
