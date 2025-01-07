@@ -21,5 +21,10 @@
 			<input type="hidden" id="page" name="page" value="listeJeux">
             <button type="submit">Liste jeux</button>
         </form>
+
+		<form method="POST">
+			<input type="hidden" id="page" name="page" value="classement">
+            <button type="submit">classement</button>
+        </form>
 	</body>
 </html>

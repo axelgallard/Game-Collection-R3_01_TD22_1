@@ -25,7 +25,7 @@
 			$controller->profil();
 		} else if ($_POST["page"]=="bibliotheque"){
 			$controller->bibliotheque();
-		} else if ($_POST["page"]=="bibliotheque"){
+		} else if ($_POST["page"]=="classement"){
 			$controller->classement();
 		}
 		else if($_POST["page"]=="listeJeux"){
