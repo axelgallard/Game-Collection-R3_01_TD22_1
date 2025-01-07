@@ -1,0 +1,53 @@
+body {
+    background-color: #211F2A; /* Fond noir */
+    color: white; /* Couleur du texte blanche */
+    font-family: Arial, sans-serif; /* Police de caractères */
+    height: 100vh; /* Hauteur de la fenêtre */
+    margin: 0; /* Supprimer les marges par défaut */
+}
+
+#info{
+    width: 300px;
+    margin-left: 10%;
+}
+
+input[type="text"] {
+    width: 100%; /* Largeur à 100% */
+    padding: 10px; /* Espacement interne */
+    margin: 10px 0; /* Espacement entre les champs */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+}
+
+button {
+    background-color: #6C56D4; /* Couleur du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none; /* Pas de bordure */
+    padding: 10px; /* Espacement interne */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur en forme de main */
+}
+
+.connection-button:hover {
+    background-color: #777; /* Couleur au survol */
+}
+
+.inscription-button {
+    background: none; /* Pas de fond */
+    border: none; /* Pas de bordure */
+    color: #ffffff; /* Couleur du texte */
+    text-decoration: none; /* Texte souligné */
+    cursor: pointer; /* Curseur en forme de main */
+}
+
+.inscription-button:hover {
+    text-decoration: underline; /* Texte souligné */
+}
+
+p{
+    margin: 0;
+}
+
+#error{
+    color:red;
+}
