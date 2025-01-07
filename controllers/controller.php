@@ -39,6 +39,11 @@ class Controller{
         $this->ajoutJeu();
     }
 
+    public function ModifJeu ($jeu){
+        $jeu = $this->model->infoJeu($jeu);
+        include 'views/ModifJeu.php';
+    }
+
     public function afficheForm() {
         include 'views/ajoutFormulaire.php';
     }

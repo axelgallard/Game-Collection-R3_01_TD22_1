@@ -26,10 +26,14 @@
         foreach($gamesList as $aGame){
             ?>
             <div class="aGame" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url('<?php echo $aGame->getUrlCover() ?>');">
-                <h3><?php echo $aGame->getNomJeu() ?></h3>
-                <p id="tempsJeu"><?php echo $aGame->getTempsJeu() ?></p>
-                <p id="plateforme"><?php echo $aGame->getPlateformes() ?></p>
-                    
+                <form action="" method="POST">
+                    <h3><?php echo $aGame->getNomJeu() ?></h3>
+                    <p id="tempsJeu"><?php echo $aGame->getTempsJeu() ?></p>
+                    <p id="plateforme"><?php echo $aGame->getPlateformes() ?></p>
+
+                    <input type="hidden" id="NomJeu" name="NomJeu" value="<?php echo $aGame->getNomJeu() ?>">
+                    <input type="hidden" id="page" name="page" value="ModifJeu">
+                </form>   
             </div>
         <?php }
         ?>
