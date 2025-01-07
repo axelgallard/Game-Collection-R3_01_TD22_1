@@ -117,6 +117,28 @@ class Model{
         $stmt->execute();
         return $stmt;
     }
+
+    public function setInfoUti($id,$nom,$prenom,$mail){
+        $stmt=$this->db->prepare("UPDATE utilisateur SET NomUti=:nom,PrenUti=:prenom,EmailUti=:mail WHERE IdUti=:id;");
+        $stmt->bindParam(':nom', $nom);
+        $stmt->bindParam(':prenom', $prenom);
+        $stmt->bindParam(':mail', $mail);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+    }
+
+    public function setMdpUti($id,$mdp){
+        $stmt=$this->db->prepare("UPDATE utilisateur SET MDPUti=:mdp WHERE IdUti=:id;");
+        $stmt->bindParam(':mdp', password_hash($mdp,PASSWORD_DEFAULT));
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+    }
+
+    public function supprimeUti($id){
+        $stmt=$this->db->prepare("DELETE FROM utilisateur WHERE IdUti=:id;");
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+    }
 }
 
 class User{

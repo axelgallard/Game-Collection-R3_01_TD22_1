@@ -23,7 +23,6 @@
     </head>
 
     <body>
-        <link rel="stylesheet" href="styles.css">
         <div id="connection">
             <form method="POST">
                 <h1>Inscription</h1>
