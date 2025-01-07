@@ -31,8 +31,12 @@ class Model{
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         $liste=array();
-        //TODO faire la boucle qui créer un objet et la renvoie la liste
+
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            array_push($liste, new Jeu($row['NomJeu'], $row['CreateurJeu'], $row['DateSortie'], $row['PlateformeJeu'], $row['DescJeu'], $row['CouvertureJeu'], $row['URLSite']));
+        }
         return $liste;
+
     }
 
     public function getInfoUtilisateur($id){
@@ -50,7 +54,7 @@ class Model{
     }
 
     public function ajoutForm($plateformes){
-        $stmt=$this->db->prepare("INSERT INTO jeu(NomJeu, CreateurJeu, PlatformeJeu, DescJeu, DateSortie, CouvertureJeu, URLSite) 
+        $stmt=$this->db->prepare("INSERT INTO jeu(NomJeu, CreateurJeu, PlateformeJeu, DescJeu, DateSortie, CouvertureJeu, URLSite) 
         VALUES(:Nom, :Editeur, ".$plateformes.", :Desc ".$_POST['Sortie du jeu'].", :Couv, :URL )");
         
         $stmt->bindParam(':Nom', $_POST['Nom du jeu']);
@@ -150,7 +154,41 @@ class Jeu{
         $this->urlCover = $urlCover;
         $this->urlSite = $urlSite;
     }
-    //TODO: getters, setters? , potentielles autres fonctions de la classe
+
+    public function getNomJeu()
+    {
+        return $this->nomJeu;
+    }
+
+    public function getEditeurJeu()
+    {
+        return $this->editeurJeu;
+    }
+
+    public function getDateSortieJeu()
+    {
+        return $this->dateSortieJeu;
+    }
+
+    public function getPlateformes()
+    {
+        return $this->plateformes;
+    }
+
+    public function getDescriptionJeu()
+    {
+        return $this->descriptionJeu;
+    }
+
+    public function getUrlCover()
+    {
+        return $this->urlCover;
+    }
+
+    public function getUrlSite()
+    {
+        return $this->urlSite;
+    }
 }
 
 ?>

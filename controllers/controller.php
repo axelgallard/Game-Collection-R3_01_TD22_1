@@ -28,6 +28,8 @@ class Controller{
     }
 
     public function bibliotheque() {
+        $gamesList = $this->model->getListeJeuByID($_SESSION['id']);
+        var_dump($gamesList);
         include 'views/bibliotheque.php'; 
     }
 
@@ -47,6 +49,10 @@ class Controller{
     public function classement() {
         $model=$this->model;
         include 'views/classement.php';
+    }
+
+    public function ajoutJeu() {
+        include 'views/ajoutJeux.php';
     }
 }
 ?>
