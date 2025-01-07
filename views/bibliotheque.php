@@ -24,7 +24,9 @@
         <?php 
         foreach($gamesList as $aGame){
             ?>
-            
+            <h3><?php echo $aGame->getNomJeu() ?></h3>
+            <p id="plateforme"><?php echo $aGame->getPlateformes() ?></p>
+            <p id="tempsJeu"><?php echo $aGame->getTempsJeu() ?></p>
         <?php }
         ?>
 

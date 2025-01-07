@@ -29,7 +29,6 @@ class Controller{
 
     public function bibliotheque() {
         $gamesList = $this->model->getListeJeuByID($_SESSION['id']);
-        var_dump($gamesList);
         include 'views/bibliotheque.php'; 
     }
 
