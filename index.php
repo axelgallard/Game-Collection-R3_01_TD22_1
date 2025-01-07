@@ -38,7 +38,7 @@
 		} else if($_POST["page"]=="listeJeux"){
 			if(isset($_POST["AjoutForm"])){
 				if($_POST["PC"]==false && $_POST["Xbox"]==false && $_POST["Playstation"]==false && $_POST["Nintendo"]==false && $_POST["Mobile"]==false){
-					echo 'ERREUR FDP';
+					echo 'ERREUR';
 					$controller->ajoutFormError();
 				}
 				else{
