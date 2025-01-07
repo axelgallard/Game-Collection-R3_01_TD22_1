@@ -65,9 +65,9 @@
                 <p>E-Mail :</p>
                 <input name="mail" id="mail" type="text" placeholder="E-Mail" value="<?php echo $infos['EmailUti'] ?>">
                 <p>Mot de passe :</p>
-                <input name="mdp" id="mdp" type="text" placeholder="MDP" >
+                <input name="mdp" id="mdp" type="password" placeholder="MDP" >
                 <p>Confirmation mot de passe :</p>
-                <input name="mdpConf" id="mdpConf" type="text" placeholder="Confirmation MDP">
+                <input name="mdpConf" id="mdpConf" type="password" placeholder="Confirmation MDP">
                 <input type="hidden" id="page" name="page" value="profil">
                 <button type="submit" class="connection-button">Modifier</button>
             </form>

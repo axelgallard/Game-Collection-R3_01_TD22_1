@@ -7,6 +7,7 @@
             $errorMessage = "Erreur : les mots de passent ne correspondent pas";
         }else{
             $model->insereUtilisateur($_POST['nom'],$_POST['prenom'],$_POST['mail'],$_POST['mdp']);
+            $id=$model->getId($_POST['mail'],$_POST['mdp']);
             $_SESSION['id']=$id;
             $_SESSION['user'] = new User($id);     
             header("Refresh:0");
@@ -36,9 +37,9 @@
                 <p>E-Mail :</p>
                 <input name="mail" id="mail" type="text" placeholder="E-Mail">
                 <p>Mot de passe :</p>
-                <input name="mdp" id="mdp" type="text" placeholder="MDP">
+                <input name="mdp" id="mdp" type="password" placeholder="MDP">
                 <p>Confirmation mot de passe :</p>
-                <input name="mdpConf" id="mdpConf" type="text" placeholder="Confirmation MDP">
+                <input name="mdpConf" id="mdpConf" type="password" placeholder="Confirmation MDP">
                 <input type="hidden" id="page" name="page" value="inscription">
                 <button type="submit" class="connection-button">S'inscrire</button>
             </form>
