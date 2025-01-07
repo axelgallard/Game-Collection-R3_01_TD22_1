@@ -16,7 +16,7 @@
         
         <form action="" method="POST">
             <p>Temps passé sur le jeu</p>
-            <input type="text" id="temps" name="temps" value="" placeholder="<?php $jeu->getTempsJeu() ?>" require>
+            <input type="text" id="temps" name="temps" value="" placeholder="<?php echo $jeu->getTempsJeu() ?>" require>
 
             <button type="submit">Ajouter</button>
             

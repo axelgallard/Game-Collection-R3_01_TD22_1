@@ -149,7 +149,7 @@ class Model{
         $stmt->execute();
     }
 
-    public function ModifTemps($jeu, $temps){
+    public function ModifTemps($temps, $jeu){
         $stmt=$this->db->prepare("UPDATE bibliotheque SET TempsJeu = :temps WHERE NomJeu LIKE :jeu AND IdUti = ".$_SESSION['id']."");
         $stmt->bindParam(':jeu', $jeu);
         $stmt->bindParam(':temps', $temps);
