@@ -33,7 +33,7 @@
                 <p>E-Mail :</p>
                 <input name="mail" id="mail" type="text" placeholder="E-Mail">
                 <p>Mot de passe :</p>
-                <input name="mdp" id="mdp" type="text" placeholder="MDP">
+                <input name="mdp" id="mdp" type="password" placeholder="MDP">
                 <input type="hidden" id="page" name="page" value="connection">
                 <button type="submit" class="connection-button">Se connecter</button>
             </form>
