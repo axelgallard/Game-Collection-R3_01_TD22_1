@@ -20,6 +20,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/navBar.css">
         <link rel="stylesheet" href="css/classement.css">
+        <link rel="stylesheet" href="css/footer.css">
         <title>classement</title>
     </head>
     <body>
@@ -38,4 +39,5 @@
                 </tbody>
             </table>
         </div>
+        <?php require_once('footer.php') ?>
     </body>

@@ -19,6 +19,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/connexion.css">
+        <link rel="stylesheet" href="css/footer.css">
         <title>Connexion</title>
     </head>
 
@@ -42,6 +43,6 @@
                 <button type="submit" class="inscription-button">S'inscrire</button>
             </form>
         </div>
-        <!-- TODO faire le footer-->
+        <?php require_once('footer.php') ?>
     </body>
 </html>
