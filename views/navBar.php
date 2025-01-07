@@ -2,9 +2,29 @@
         <ul id="navBar">
             <a href=""><img src="ressources/logo.png" alt="Logo" id="logo" ></a>
 
-            <li id="rightSide"><a id="pad" href="profil.php">Profil</a></li> 
-            <li id="rightSide"><a id="pad" href="classement.php">Classement</a></li>
-            <li id="rightSide"><a id="pad" href="ajouterUnJeu.php">Ajouter un jeu</a></li>
-            <li id="rightSide"><a id="pad" href="bibliotheque.php"><u>Ma Bibliothèque</u></a></li>   
+            <li id="rightSide">
+                <form method="post" action="">
+                    <input type="hidden" name="page" value="profil">
+                    <button type="submit" id="pad">Profil</button>
+                </form>
+            </li>
+            <li id="rightSide">
+                <form method="post" action="">
+                    <input type="hidden" name="page" value="classement">
+                    <button type="submit" id="pad">Classement</button>
+                </form>
+            </li>
+            <li id="rightSide">
+                <form method="post" action="">
+                    <input type="hidden" name="page" value="listeJeux">
+                    <button type="submit" id="pad">Ajouter un jeu</button>
+                </form>
+            </li>
+            <li id="rightSide">
+                <form method="post" action="">
+                    <input type="hidden" name="page" value="bibliotheque">
+                    <button type="submit" id="pad">Ma Bibliothèque</button>
+                </form>
+            </li>
         </ul>
 </div>

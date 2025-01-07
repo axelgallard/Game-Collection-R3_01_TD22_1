@@ -1,46 +1,48 @@
-body{
-  padding: 0%;
-  margin: 0%;
+body {
+  padding: 0;
+  margin: 0;
 }
 
-#logo{
-    width:5%;
-    height:5%;
+#logo {
+  width: 5%;
 }
 
-ul#navBar li#rightSide
-  {
-    float: right;
-  }
+ul#navBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #211F2A;
+}
 
-  ul#navBar li a:not(#logo)
-  {
-      font-size: 25px;
-      font-family: Inter;
-      display: block;
-      padding: 30px;
-  }
+ul#navBar li {
+  float: right; /* Aligne les éléments à droite */
+}
 
-  ul#navBar
-  {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #211F2A;
-  }
+ul#navBar li form {
+  display: inline; /* Affiche les formulaires sur la même ligne */
+}
 
-  
-  .navBar a {
-    color: white;
-    text-decoration: none; 
-  }
+ul#navBar li button {
+  font-size: 25px; /* Taille de la police */
+  font-family: Inter; /* Police de caractères */
+  background: none; /* Pas de fond */
+  border: none; /* Pas de bordure */
+  color: white; /* Couleur du texte */
+  padding: 30px; /* Espacement autour du texte */
+  background-color: #211F2A;
+  cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+}
 
-  .navBar a u {
-    text-decoration: underline; 
-  }
+ul#navBar li button:hover {
+  text-decoration: underline; /* Soulignement au survol */
+}
 
-  .navBar li {
-    color: white;
-  }
+.navBar a {
+  color: white;
+  text-decoration: none; 
+}
 
+.navBar li {
+  color: white;
+}
