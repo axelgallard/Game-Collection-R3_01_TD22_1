@@ -55,7 +55,7 @@
         <?php require_once('navBar.php') ?>
         <div id="info">
             <form method="POST">
-                <h1>Inscription</h1>
+                <h1>Mon profil</h1>
                 <?php if (!empty($errorMessage)){ ?>
                     <p id="error"><?php echo htmlspecialchars($errorMessage); ?></p>
                 <?php } ?>
