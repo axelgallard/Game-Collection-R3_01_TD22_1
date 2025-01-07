@@ -1,6 +1,6 @@
 <div class="navBar">
         <ul id="navBar">
-            <a href=""><img src="ressources/logo.png" alt="Logo" id="logo" ></a>
+            <img src="ressources/logo.png" alt="Logo" id="logo" >
 
             <li id="rightSide">
                 <form method="post" action="">
