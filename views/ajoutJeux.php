@@ -10,22 +10,23 @@
         <!-- NAVBAR -->
         <?php require_once('navBar.php') ?>
         <!--        -->
-        <h1>Ajouter un jeu a sa bibliothèque</h1>
-        <form action="" method="POST">
-            <input type="text" id="Recherche" name="Recherche" value="" placeholder="Rechercher un jeu" require>
+        <div id="top">
+            <h1>Ajouter un jeu a sa bibliothèque</h1>
+            <form action="" method="POST">
+                <input type="text" id="Recherche" name="Recherche" value="" placeholder="Rechercher un jeu" require>
 
-            <button type="submit">Rechercher</button>
-            <input type="hidden" id="page" name="page" value="listeJeux">
-        </form>
-
-        <h2>Resultats de la recherche</h2>
-
+                <button type="submit">Rechercher</button>
+                <input type="hidden" id="page" name="page" value="listeJeux">
+            </form>
+        
+            <h2>Resultats de la recherche</h2>
+        </div>
         <div id="gamesDisplayArea">
             <?php 
                 foreach($gamesList as $aGame){
                     ?>
                     <div class="aGame" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url('<?php echo $aGame->getUrlCover() ?>');">
-    
+    a
                         <h3><?php echo $aGame->getNomJeu() ?></h3>
                         <p id="plateforme"><?php echo $aGame->getPlateformes() ?></p>
                         <?php 
