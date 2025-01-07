@@ -40,7 +40,7 @@ class Controller{
     public function ajoutForm($platforme) {
         $this->model->ajoutForm($platforme);
         
-        bibliotheque();
+        $this->bibliotheque();
     }
 
     public function classement() {
