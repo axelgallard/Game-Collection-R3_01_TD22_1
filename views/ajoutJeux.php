@@ -36,12 +36,15 @@
                 <?php 
                 }
             ?>
-        </div>
-        <h2>Vous ne trouvez pas votre bonheur ?</h2>
+            <h2>Vous ne trouvez pas votre bonheur ?</h2>
         <form action="" method="POST">
             <button type="submit">Ajouter un Nouveau jeu</button>
             <input type="hidden" id="AjoutForm" name="AjoutForm" value="AjoutForm">
             <input type="hidden" id="page" name="page" value="listeJeux">
         </form>
+
+        </div>
+
+        
         
     </body>
