@@ -80,6 +80,13 @@ class Model{
 
     }
 
+    public function infoJeu($jeu) {
+        $stmt=$this->db->prepare("SELECT * FROM jeu WHERE NomJeu LIKE :jeu");
+        $stmt->execute();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        return new Jeu($row['NomJeu'], $row['CreateurJeu'], $row['DateSortie'], $row['PlateformeJeu'], $row['DescJeu'], $row['CouvertureJeu'], $row['URLSite'], 0);
+    }
+
     public function ajoutJeuBibli($jeu){
         $stmt=$this->db->prepare("INSERT INTO bibliotheque (IdUti, NomJeu) VALUES (:id, :Nom)");
         
