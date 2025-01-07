@@ -70,5 +70,17 @@ class Controller{
         include 'views/ajoutJeux.php';
     }
 
+    public function SupBibli($jeu) {
+        $this->model->SupBibli($jeu);
+        
+        $this->bibliotheque();
+    }
+
+    public function ModifTemps($temps, $jeu){
+        $this->model->ModifTemps($temps, $jeu);
+        
+        $this->bibliotheque();
+    }
+
 }
 ?>

@@ -35,7 +35,15 @@
 		} else if ($_POST["page"]=="bibliotheque"){
 			$controller->bibliotheque();
 		} else if ($_POST["page"]=="ModifJeu"){
-			$controller->ModifJeu($_POST["NomJeu"]);
+			if(isset($_POST['ModifTemps'])){
+				$controller->ModifTemps($_POST["temps"], $_POST["NomJeu"]);
+			}
+			else if(isset($_POST['SupBibli'])){
+				$controller->SupBibli($_POST["NomJeu"]);
+			}
+			else {
+				$controller->ModifJeu($_POST["NomJeu"]);
+			}
 		} else if ($_POST["page"]=="classement"){
 			$controller->classement();
 		} else if ($_POST["page"]=="listeJeux"){

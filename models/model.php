@@ -82,6 +82,7 @@ class Model{
 
     public function infoJeu($jeu) {
         $stmt=$this->db->prepare("SELECT * FROM jeu WHERE NomJeu LIKE :jeu");
+        $stmt->bindParam(':jeu', $jeu);
         $stmt->execute();
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         return new Jeu($row['NomJeu'], $row['CreateurJeu'], $row['DateSortie'], $row['PlateformeJeu'], $row['DescJeu'], $row['CouvertureJeu'], $row['URLSite'], 0);
@@ -139,6 +140,19 @@ class Model{
     public function supprimeUti($id){
         $stmt=$this->db->prepare("DELETE FROM utilisateur WHERE IdUti=:id;");
         $stmt->bindParam(':id', $id);
+        $stmt->execute();
+    }
+
+    public function SupBibli($jeu) {
+        $stmt=$this->db->prepare("DELETE FROM bibliotheque WHERE NomJeu LIKE :jeu AND IdUti = ".$_SESSION['id']."");
+        $stmt->bindParam(':jeu', $jeu);
+        $stmt->execute();
+    }
+
+    public function ModifTemps($jeu, $temps){
+        $stmt=$this->db->prepare("UPDATE bibliotheque SET TempsJeu = :temps WHERE NomJeu LIKE :jeu AND IdUti = ".$_SESSION['id']."");
+        $stmt->bindParam(':jeu', $jeu);
+        $stmt->bindParam(':temps', $temps);
         $stmt->execute();
     }
 }
