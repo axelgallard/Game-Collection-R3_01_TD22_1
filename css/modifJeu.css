@@ -1,4 +1,24 @@
-#infosJeu
+main
 {
-    
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+#infosJeu 
+{
+    width : 50%;
+    height: 20%;
+
+}
+
+#infosJeu *, #ajoutTempsDeJeu *
+{
+    padding: 1%;
+}
+
+#coverJeu
+{
+    width:20%;
 }
