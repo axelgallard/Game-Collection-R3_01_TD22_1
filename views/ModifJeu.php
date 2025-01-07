@@ -20,7 +20,7 @@
 
             <button type="submit">Ajouter</button>
             
-            <input type="text" id="NomJeu" name="NomJeu" value="<?php echo $jeu->getNomJeu() ?>"> 
+            <input type="hidden" id="NomJeu" name="NomJeu" value="<?php echo $jeu->getNomJeu() ?>"> 
             <input type="hidden" id="ModifTemps" name="ModifTemps" value="">
             <input type="hidden" id="page" name="page" value="ModifJeu">
         </form>
@@ -28,7 +28,7 @@
         <form action="" method="POST">
             <button type="submit">Supprimer le jeu de ma bibliothèque</button>
 
-            <input type="text" id="NomJeu" name="NomJeu" value="<?php echo $jeu->getNomJeu() ?>">
+            <input type="hidden" id="NomJeu" name="NomJeu" value="<?php echo $jeu->getNomJeu() ?>">
             <input type="hidden" id="SupBibli" name="SupBibli" value="">
             <input type="hidden" id="page" name="page" value="ModifJeu">
         </form>
