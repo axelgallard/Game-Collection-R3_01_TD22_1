@@ -154,7 +154,41 @@ class Jeu{
         $this->urlCover = $urlCover;
         $this->urlSite = $urlSite;
     }
-    //TODO: getters, setters? , potentielles autres fonctions de la classe
+
+    public function getNomJeu()
+    {
+        return $this->nomJeu;
+    }
+
+    public function getEditeurJeu()
+    {
+        return $this->editeurJeu;
+    }
+
+    public function getDateSortieJeu()
+    {
+        return $this->dateSortieJeu;
+    }
+
+    public function getPlateformes()
+    {
+        return $this->plateformes;
+    }
+
+    public function getDescriptionJeu()
+    {
+        return $this->descriptionJeu;
+    }
+
+    public function getUrlCover()
+    {
+        return $this->urlCover;
+    }
+
+    public function getUrlSite()
+    {
+        return $this->urlSite;
+    }
 }
 
 ?>
