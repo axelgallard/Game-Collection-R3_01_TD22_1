@@ -23,26 +23,26 @@ ul#navBar {
 }
 
 ul#navBar li {
-  float: right; /* Aligne les éléments à droite */
+  float: right; 
 }
 
 ul#navBar li form {
-  display: inline; /* Affiche les formulaires sur la même ligne */
+  display: inline;
 }
 
 ul#navBar li button {
-  font-size: 25px; /* Taille de la police */
-  font-family: Inter; /* Police de caractères */
-  background: none; /* Pas de fond */
-  border: none; /* Pas de bordure */
-  color: white; /* Couleur du texte */
-  padding: 30px; /* Espacement autour du texte */
+  font-size: 25px; 
+  font-family: Inter;
+  background: none; 
+  border: none; 
+  color: white;
+  padding: 30px; 
   background-color: #211F2A;
-  cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+  cursor: pointer; 
 }
 
 ul#navBar li button:hover {
-  text-decoration: underline; /* Soulignement au survol */
+  text-decoration: underline; 
 }
 
 .navBar a {

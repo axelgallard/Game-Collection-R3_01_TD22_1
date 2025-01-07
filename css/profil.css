@@ -1,9 +1,9 @@
 body {
-    background-color: #211F2A; /* Fond noir */
-    color: white; /* Couleur du texte blanche */
-    font-family: Arial, sans-serif; /* Police de caractères */
-    height: 100vh; /* Hauteur de la fenêtre */
-    margin: 0; /* Supprimer les marges par défaut */
+    background-color: #211F2A; 
+    color: white; 
+    font-family: Arial, sans-serif; 
+    height: 100vh;
+    margin: 0; 
 }
 
 #info{
@@ -13,46 +13,46 @@ body {
 
 
 input[type="text"] {
-    width: 100%; /* Largeur à 100% */
-    padding: 10px; /* Espacement interne */
-    margin: 10px 0; /* Espacement entre les champs */
-    border: none; /* Pas de bordure */
-    border-radius: 4px; /* Coins arrondis */
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px 0;
+    border: none; 
+    border-radius: 4px; 
     color : black;
 }
 
 input[type="password"] {
-    width: 100%; /* Largeur à 100% */
-    padding: 10px; /* Espacement interne */
-    margin: 10px 0; /* Espacement entre les champs */
-    border: none; /* Pas de bordure */
-    border-radius: 4px; /* Coins arrondis */
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px 0;
+    border: none; 
+    border-radius: 4px; 
     color : black;
 }
 
 button {
-    background-color: #6C56D4; /* Couleur du bouton */
-    color: white; /* Couleur du texte du bouton */
-    border: none; /* Pas de bordure */
-    padding: 10px; /* Espacement interne */
-    border-radius: 4px; /* Coins arrondis */
-    cursor: pointer; /* Curseur en forme de main */
+    background-color: #6C56D4; 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    border-radius: 4px;
+    cursor: pointer; 
 }
 
 .connection-button:hover {
-    background-color: #777; /* Couleur au survol */
+    background-color: #777; 
 }
 
 .inscription-button {
-    background: none; /* Pas de fond */
-    border: none; /* Pas de bordure */
-    color: #ffffff; /* Couleur du texte */
-    text-decoration: none; /* Texte souligné */
-    cursor: pointer; /* Curseur en forme de main */
+    background: none;
+    border: none;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .inscription-button:hover {
-    text-decoration: underline; /* Texte souligné */
+    text-decoration: underline; 
 }
 
 p{
