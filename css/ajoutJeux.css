@@ -33,3 +33,8 @@
     justify-content: flex-end;   
     align-items: flex-start;
 }
+
+.aGame:hover
+{        
+    transform: scale(1.05); 
+}

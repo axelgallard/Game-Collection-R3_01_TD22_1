@@ -67,6 +67,11 @@ h2
     align-items: flex-start;
 }
 
+.aGame:hover
+{        
+    transform: scale(1.05); 
+}
+
 #tempsJeu {
     align-self: flex-end;  
     font-size: 1.5em;
