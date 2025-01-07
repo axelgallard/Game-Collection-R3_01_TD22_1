@@ -28,15 +28,11 @@
 			$controller->bibliotheque();
 		} else if ($_POST["page"]=="bibliotheque"){
 			$controller->classement();
-		} else if  ($_POST["page"]=="ajoutJeu"){
+		} else if  ($_POST["page"]=="listeJeux"){
 			if(isset($_POST["Recherche"])){
 				$controller->ajoutJeuRecherche($_POST['Recherche']);
-			}
-			else{
-				$controller->ajoutJeu();
-			}						
-		} else if($_POST["page"]=="listeJeux"){
-			if(isset($_POST["AjoutForm"])){
+			}					
+			else if(isset($_POST["AjoutForm"])){
 				if($_POST["PC"]==false && $_POST["Xbox"]==false && $_POST["Playstation"]==false && $_POST["Nintendo"]==false && $_POST["Mobile"]==false){
 					echo 'ERREUR FDP';
 					$controller->ajoutFormError();
@@ -67,8 +63,8 @@
 				}
 			}
 			else{
-				$controller->listeJeux();
-			}		
+				$controller->ajoutJeu();
+			}			
 		}else{
 			$controller->index();
 		}

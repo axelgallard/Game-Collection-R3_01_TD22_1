@@ -6,7 +6,7 @@
     </head>
     <body>
         <!-- NAVBAR -->
-        <?php require_once('views/navBar.php') ?>
+        <?php require_once('navBar.php') ?>
         <!--        -->
         <h1>Ajouter un jeu a sa bibliothèque</h1>
         <p>Le jeu que vous souhaiter ajouter n'existe pas ! Vous pouvez le créer, celui-ci sera automatiquement ajouter a votre bibliothèque !</p>
@@ -40,14 +40,15 @@
 
                 <p><input type="checkbox" id="Mobile" name="Mobile">Mobile</p>
             </div>
-            <input type="hidden" id="AjoutForm" name="AjoutForm" value="AjoutForm">
-            <input type="hidden" id="page" name="page" value="bibliotheque">
 
             <!-- Crée un $_POST['Error'] qui permet de d'afficher une erreur si on revien directement sur cette page-->
             <input type="hidden" id="Error" name="Error" value="Error"> 
             
             <!-- Pas fini-->
             <button type="submit">Ajouter le jeu</button>
+
+            <input type="hidden" id="AjoutForm" name="AjoutForm" value="AjoutForm">
+            <input type="hidden" id="page" name="page" value="listJeux">
         </form>
 
     </body>

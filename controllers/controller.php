@@ -33,17 +33,14 @@ class Controller{
         include 'views/bibliotheque.php'; 
     }
 
-    public function listeJeux() {
-        $model=$this->model;
-        include 'views/listeJeux.php';
-    }
-
     public function ajoutFormError() {
         include 'views/ajoutJeux.php';
     }
 
     public function ajoutForm($platforme) {
         $this->model->ajoutForm($platforme);
+        
+        bibliotheque();
     }
 
     public function classement() {
