@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,15 +19,15 @@
     <br>
     <h2>Mes jeux</h2>
 
-    <div id="#gamesDisplayArea">
+    <div id="gamesDisplayArea">
 
         <?php 
         foreach($gamesList as $aGame){
             ?>
-            <div class="game" style="background-image: url('<?php echo $aGame->getUrlCover() ?>')">
+            <div class="aGame" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url('<?php echo $aGame->getUrlCover() ?>');">
                 <h3><?php echo $aGame->getNomJeu() ?></h3>
                 <p id="plateforme"><?php echo $aGame->getPlateformes() ?></p>
-                <p id="tempsJeu"><?php echo $aGame->getTempsJeu() ?></p>
+                <p id="tempsJeu"><?php echo $aGame->getTempsJeu() ?></p>    
             </div>
         <?php }
         ?>
@@ -36,3 +36,4 @@
 
 </body>
 </html>
+
