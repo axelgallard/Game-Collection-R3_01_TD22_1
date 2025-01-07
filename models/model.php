@@ -81,7 +81,7 @@ class Model{
     }
 
     public function infoJeu($jeu) {
-        $stmt=$this->db->prepare("SELECT * FROM bibliotheque INNER JOIN JEU ON bibliotheque.NomJeu=jeu.NomJeu WHERE NomJeu LIKE :jeu AND IdUti = ".$_SESSION['id']."");
+        $stmt=$this->db->prepare("SELECT * FROM bibliotheque INNER JOIN JEU ON bibliotheque.NomJeu=jeu.NomJeu WHERE bibliotheque.NomJeu LIKE :jeu AND IdUti = ".$_SESSION['id']."");
         $stmt->bindParam(':jeu', $jeu);
         $stmt->execute();
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
