@@ -1,0 +1,35 @@
+#gamesDisplayArea
+{ 
+    margin-inline: 5%;
+    justify-content: center;   
+    align-items: center;      
+
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 3%; 
+    justify-content: flex-start; 
+
+    width: 90%; 
+    height: 100%;
+
+    margin-bottom: 10%;
+    
+}
+
+.aGame
+{
+    background-repeat: no-repeat; 
+    background-position: center;
+    
+    border-radius: 8px; 
+    width: 30%; 
+    height: 50%;
+    padding: 0.2%; 
+    box-sizing: border-box; 
+    margin-bottom: 1%; 
+
+    display: flex;               
+    flex-direction: column;    
+    justify-content: flex-end;   
+    align-items: flex-start;
+}

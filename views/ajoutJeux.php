@@ -2,6 +2,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/ajoutJeux.css">
         <title>Ajouter un Jeu</title>
     </head>
     <body>
@@ -17,10 +18,12 @@
         </form>
 
         <h2>Resultats de la recherche</h2>
+
+        <div id="gamesDisplayArea">
             <?php 
                 foreach($gamesList as $aGame){
                     ?>
-                    <div class="game" style="background-image: url('<?php echo $aGame->getUrlCover() ?>')">
+                    <div class="aGame" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url('<?php echo $aGame->getUrlCover() ?>');">
                         <form action="" method="POST">
                             <h3><?php echo $aGame->getNomJeu() ?></h3>
                             <p id="plateforme"><?php echo $aGame->getPlateformes() ?></p>
@@ -33,6 +36,7 @@
                 <?php 
                 }
             ?>
+        </div>
         <h2>Vous ne trouvez pas votre bonheur ?</h2>
         <form action="" method="POST">
             <button type="submit">Ajouter un Nouveau jeu</button>
