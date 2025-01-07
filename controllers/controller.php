@@ -51,7 +51,13 @@ class Controller{
         include 'views/classement.php';
     }
 
+    public function ajoutJeuRecherche($GameName) {
+        $gamesList = $this->model->getLstJeuxByName($GameName);
+        include 'views/ajoutJeux.php';
+    }
+
     public function ajoutJeu() {
+        $gamesList = $this->model->getLstJeux();
         include 'views/ajoutJeux.php';
     }
 }

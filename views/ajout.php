@@ -12,5 +12,12 @@
         <form action="" method="POST">
             <input type="text" id="Recherche" name="Recherche" value="" placeholder="Rechercher un jeu" require>
 
-            <button type="submit"></button>
+            <button type="submit">Rechercher</button>
         </form>
+
+        <h2>Resultats de la recherche</h2>
+        <?php 
+            //A finir avec la soluce de nathan
+        ?>
+        
+    </body>
