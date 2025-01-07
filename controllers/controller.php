@@ -28,6 +28,8 @@ class Controller{
     }
 
     public function bibliotheque() {
+        $gamesList = $this->model->getListeJeuByID($_SESSION['id']);
+        var_dump($gamesList);
         include 'views/bibliotheque.php'; 
     }
 
@@ -36,12 +38,9 @@ class Controller{
         include 'views/listeJeux.php';
     }
 
-    public function ajoutFormError() {
+    public function ajoutJeu() {
         include 'views/ajoutJeux.php';
     }
 
-    public function ajoutForm($platforme) {
-        $this->model->ajoutForm($platforme);
-    }
 }
 ?>
