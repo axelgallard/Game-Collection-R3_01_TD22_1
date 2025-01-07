@@ -45,9 +45,13 @@ class Controller{
         $this->model->ajoutForm($platforme);
     }
 
+    public function classement() {
+        $model=$this->model;
+        include 'views/classement.php';
+    }
+
     public function ajoutJeu() {
         include 'views/ajoutJeux.php';
     }
-
 }
 ?>
