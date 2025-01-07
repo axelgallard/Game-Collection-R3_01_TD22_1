@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/bibliotheque.css">
-    <link rel="stylesheet" href="css/index.css">
     <title>Bibliothèque</title>
 </head>
 <body>
