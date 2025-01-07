@@ -83,8 +83,8 @@ class Model{
         
         $stmt2->bindParam(':Nom', $_POST['Nom du jeu']);
         $stmt2->execute();
-
     }
+
     public function addresseMailLibre($mail){
         $stmt=$this->db->prepare("SELECT IdUti FROM utilisateur WHERE EmailUti LIKE :mail;");
         $stmt->bindParam(':mail', $mail);
@@ -100,6 +100,13 @@ class Model{
         $stmt->bindParam(':mail', $mail);
         $stmt->bindParam(':mdp', password_hash($mdp,PASSWORD_DEFAULT));
         $stmt->execute();
+    }
+
+    
+    public function getClassementJeux(){
+        $stmt=$this->db->prepare("SELECT utilisateur.NomUti,utilisateur.PrenUti,bibliotheque.NomJeu,bibliotheque.TempsJeu FROM bibliotheque INNER JOIN utilisateur ON utilisateur.IdUti=bibliotheque.IdUti ORDER BY bibliotheque.TempsJeu DESC");
+        $stmt->execute();
+        return $stmt;
     }
 }
 
@@ -145,7 +152,6 @@ class User{
     public function getIdUti(){
         return $this->idUti;
     }
-    
 
 }
 
