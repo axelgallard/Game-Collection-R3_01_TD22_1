@@ -69,20 +69,15 @@ class Model{
 
     public function ajoutForm($plateformes){
         $stmt=$this->db->prepare("INSERT INTO jeu(NomJeu, CreateurJeu, PlateformeJeu, DescJeu, DateSortie, CouvertureJeu, URLSite) 
-        VALUES(:Nom, :Editeur, ".$plateformes.", :Desc ".$_POST['Sortie du jeu'].", :Couv, :URL )");
+        VALUES(:Nom, :Editeur, '".$plateformes."', :Desc, '".$_POST['SortieJeu']."', :Couv, :URL)");
         
-        $stmt->bindParam(':Nom', $_POST['Nom du jeu']);
-        $stmt->bindParam(':Editeur', $_POST['Editeur du jeu']);
+        $stmt->bindParam(':Nom', $_POST['NomJeu']);
+        $stmt->bindParam(':Editeur', $_POST['EditeurJeu']);
         $stmt->bindParam(':Desc', $_POST['DescJeu']);
         $stmt->bindParam(':Couv', $_POST['CouvertureJeu']);
         $stmt->bindParam(':URL', $_POST['URLSite']);
         $stmt->execute();
 
-        $stmt2=$this->db->prepare("INSERT INTO bibliotheque(Id, UtiNomJeu) 
-        VALUES( ".$_SESSION["id"].", :Nom)");
-        
-        $stmt2->bindParam(':Nom', $_POST['Nom du jeu']);
-        $stmt2->execute();
     }
 
     public function ajoutJeuBibli($jeu){

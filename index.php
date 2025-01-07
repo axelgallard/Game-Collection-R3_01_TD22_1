@@ -39,33 +39,38 @@
 				$controller->ajoutJeuRecherche($_POST['Recherche']);
 			}					
 			else if(isset($_POST["AjoutForm"])){
-				if($_POST["PC"]==false && $_POST["Xbox"]==false && $_POST["Playstation"]==false && $_POST["Nintendo"]==false && $_POST["Mobile"]==false){
-					echo 'ERREUR';
-					$controller->ajoutFormError();
+				if(isset($_POST["PC"])){
+					if($_POST["PC"]==false && $_POST["Xbox"]==false && $_POST["Playstation"]==false && $_POST["Nintendo"]==false && $_POST["Mobile"]==false){
+						echo 'ERREUR';
+						$controller->afficheForm();
+					}
+					else{
+						$platforme = '';
+						if(isset($_POST["PC"]) && $_POST["PC"] == true){
+							$platforme = $platforme . "PC ";
+						}
+	
+						if(isset($_POST["Xbox"]) && $_POST["Xbox"] == true){
+							$platforme = $platforme . "Xbox ";
+						}
+	
+						if(isset($_POST["Playstation"]) && $_POST["Playstation"] == true){
+							$platforme = $platforme . "Playstation ";
+						}
+	
+						if(isset($_POST["Nintendo"]) && $_POST["Nintendo"] == true){
+							$platforme = $platforme . "Nintendo ";
+						}
+						
+						if(isset($_POST["Mobile"]) && $_POST["Mobile"] == true){
+							$platforme = $platforme . "Mobile";
+						}
+	
+						$controller->ajoutForm($platforme, $_POST["NomJeu"]);
+					}
 				}
-				else{
-					$platforme = '';
-        			if($_POST["PC"] == true){
-						$platforme = $platforme + "PC ";
-					}
-
-					if($_POST["Xbox"] == true){
-						$platforme = $platforme + "Xbox ";
-					}
-
-					if($_POST["Playstation"] == true){
-						$platforme = $platforme + "Playstation ";
-					}
-
-					if($_POST["Nintendo"] == true){
-						$platforme = $platforme + "Nintendo ";
-					}
-					
-					if($_POST["Mobile"] == true){
-						$platforme = $platforme + "Mobile";
-					}
-
-					$controller->ajoutForm($platforme, $_POST['Nom du jeu']);
+				else {
+					$controller->afficheForm();
 				}
 			}
 			else if(isset($_POST['ajoutjeu'])){

@@ -39,8 +39,8 @@ class Controller{
         $this->ajoutJeu();
     }
 
-    public function ajoutFormError() {
-        include 'views/ajoutJeux.php';
+    public function afficheForm() {
+        include 'views/ajoutFormulaire.php';
     }
 
     public function ajoutForm($platforme, $jeu) {
