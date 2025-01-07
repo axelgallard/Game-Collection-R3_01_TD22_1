@@ -6,7 +6,7 @@
     </head>
     <body>
         <!-- NAVBAR -->
-        <?php require_once('views/navBar.php') ?>
+        <?php require_once('navBar.php') ?>
         <!--        -->
         <h1>Ajouter un jeu a sa bibliothèque</h1>
         <form action="" method="POST">
@@ -16,8 +16,18 @@
         </form>
 
         <h2>Resultats de la recherche</h2>
-        <?php 
-            //A finir avec la soluce de nathan
-        ?>
+        <form action="">
+            <?php 
+                foreach($gamesList as $aGame){
+                    ?>
+                    <div class="game" style="background-image: url('<?php echo $aGame->getUrlCover() ?>')">
+                        <h3><?php echo $aGame->getNomJeu() ?></h3>
+                        <p id="plateforme"><?php echo $aGame->getPlateformes() ?></p>
+                        <button type="submit">Ajouter a la bibliothèque</button>
+                    </div>
+                <?php 
+                }
+            ?>
+        </form>
         
     </body>
