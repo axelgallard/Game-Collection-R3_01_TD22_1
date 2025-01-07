@@ -86,10 +86,12 @@ class Model{
     }
 
     public function ajoutJeuBibli($jeu){
-        $stmt=$this->db->prepare("INSERT INTO bibliotheque (NomJeu, IdUti) VALUES (:Nom, :id)");
-
+        $stmt=$this->db->prepare("INSERT INTO bibliotheque (IdUti, NomJeu) VALUES (:id, :Nom)");
+        
         $stmt->bindParam(':Nom', $jeu);
         $stmt->bindParam(':id', $_SESSION['id']);
+
+        $stmt->execute();
     }
 
     public function addresseMailLibre($mail){

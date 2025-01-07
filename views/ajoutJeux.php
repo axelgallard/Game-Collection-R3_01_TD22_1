@@ -25,8 +25,8 @@
                             <h3><?php echo $aGame->getNomJeu() ?></h3>
                             <p id="plateforme"><?php echo $aGame->getPlateformes() ?></p>
                             <button type="submit">Ajouter a la bibliothèque</button>
-                            
-                            <input type="hidden" id="ajoutjeu" name="ajoutjeu" value="<?php $aGame->getNomJeu ?>">
+
+                            <input type="hidden" id="ajoutjeu" name="ajoutjeu" value="<?php echo $aGame->getNomJeu() ?>">
                             <input type="hidden" id="page" name="page" value="listeJeux">
                         </form>
                     </div>
