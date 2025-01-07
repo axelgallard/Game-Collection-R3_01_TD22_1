@@ -21,7 +21,7 @@
 
     <br>
     <h2>Mes jeux</h2>
-    <p>(Cliquez sur le titre du jeu pour le modifier)</p>
+    <p id="textCliquerSurJeu">(Cliquez sur le titre du jeu pour le modifier)</p>
 
     <div id="gamesDisplayArea">
 
