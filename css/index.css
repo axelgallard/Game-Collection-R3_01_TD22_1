@@ -11,7 +11,24 @@ body
     background-color: #281c2c;
 }
 
-button
-{
+button{
+    color:black;
+}
+
+input[type="text"] {
+    width: 100%; /* Largeur à 100% */
+    padding: 10px; /* Espacement interne */
+    margin: 10px 0; /* Espacement entre les champs */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    color : black;
+}
+
+input[type="password"] {
+    width: 100%; /* Largeur à 100% */
+    padding: 10px; /* Espacement interne */
+    margin: 10px 0; /* Espacement entre les champs */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
     color : black;
 }
