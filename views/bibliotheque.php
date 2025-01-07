@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/bibliotheque.css">
     <title>Bibliothèque</title>
 </head>
@@ -26,14 +27,15 @@
             ?>
             <div class="aGame" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url('<?php echo $aGame->getUrlCover() ?>');">
                 <h3><?php echo $aGame->getNomJeu() ?></h3>
+                <p id="tempsJeu"><?php echo $aGame->getTempsJeu() ?></p>
                 <p id="plateforme"><?php echo $aGame->getPlateformes() ?></p>
-                <p id="tempsJeu"><?php echo $aGame->getTempsJeu() ?></p>    
+                    
             </div>
         <?php }
         ?>
 
     </div>
-
+    <?php require_once('footer.php') ?>
 </body>
 </html>
 
