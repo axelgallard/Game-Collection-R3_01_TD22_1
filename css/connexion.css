@@ -1,67 +1,67 @@
 body {
-    background-color: #211F2A; /* Fond noir */
-    color: white; /* Couleur du texte blanche */
-    font-family: Arial, sans-serif; /* Police de caractères */
-    display: flex; /* Utilisation de flexbox pour centrer */
-    justify-content: center; /* Centrer horizontalement */
-    align-items: center; /* Centrer verticalement */
-    height: 100vh; /* Hauteur de la fenêtre */
-    margin: 0; /* Supprimer les marges par défaut */
+    background-color: #211F2A; 
+    color: white;
+    font-family: Arial, sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0;
 }
 
 #connection {
-    background-color: #262836; /* Couleur plus claire que le fond */
-    padding: 20px; /* Espacement interne */
-    border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre */
+    background-color: #262836; 
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
 
 input[type="text"] {
-    width: 100%; /* Largeur à 100% */
-    padding: 10px; /* Espacement interne */
-    margin: 10px 0; /* Espacement entre les champs */
-    border: none; /* Pas de bordure */
-    border-radius: 4px; /* Coins arrondis */
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border: none; 
+    border-radius: 4px; 
     color : black;
 }
 
 input[type="password"] {
-    width: 100%; /* Largeur à 100% */
-    padding: 10px; /* Espacement interne */
-    margin: 10px 0; /* Espacement entre les champs */
-    border: none; /* Pas de bordure */
-    border-radius: 4px; /* Coins arrondis */
+    width: 100%; 
+    padding: 10px; 
+    margin: 10px 0; 
+    border: none;
+    border-radius: 4px; 
     color : black;
 }
 
 button {
-    background-color: #6C56D4; /* Couleur du bouton */
-    color: white; /* Couleur du texte du bouton */
-    border: none; /* Pas de bordure */
-    padding: 10px; /* Espacement interne */
-    border-radius: 4px; /* Coins arrondis */
-    cursor: pointer; /* Curseur en forme de main */
+    background-color: #6C56D4; 
+    color: white; 
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer; 
 }
 
 .connection-button:hover {
-    background-color: #777; /* Couleur au survol */
+    background-color: #777;
 }
 
 
 a:hover {
-    text-decoration: underline; /* Soulignement au survol */
+    text-decoration: underline; 
 }
 
 .inscription-button {
-    background: none; /* Pas de fond */
-    border: none; /* Pas de bordure */
-    color: #ffffff; /* Couleur du texte */
-    text-decoration: none; /* Texte souligné */
-    cursor: pointer; /* Curseur en forme de main */
+    background: none; 
+    border: none; 
+    color: #ffffff; 
+    text-decoration: none;
+    cursor: pointer; 
 }
 
 .inscription-button:hover {
-    text-decoration: underline; /* Texte souligné */
+    text-decoration: underline; 
 }
 
 p{
