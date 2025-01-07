@@ -25,6 +25,8 @@
 			$controller->profil();
 		} else if ($_POST["page"]=="bibliotheque"){
 			$controller->bibliotheque();
+		} else if ($_POST["page"]=="bibliotheque"){
+			$controller->classement();
 		}
 		else if($_POST["page"]=="listeJeux"){
 			if($_POST["AjoutJeu"]=="AjoutJeu"){
@@ -53,7 +55,7 @@
 					if($_POST["Mobile"] == true){
 						$platforme = $platforme + "Mobile";
 					}
-					
+
 					$controller->ajoutForm($platforme);
 				}
 			}

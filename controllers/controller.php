@@ -43,5 +43,10 @@ class Controller{
     public function ajoutForm($platforme) {
         $this->model->ajoutForm($platforme);
     }
+
+    public function classement() {
+        $model=$this->model;
+        include 'views/classement.php';
+    }
 }
 ?>
