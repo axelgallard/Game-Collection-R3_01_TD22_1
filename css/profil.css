@@ -18,7 +18,7 @@ input[type="text"] {
     margin: 10px 0;
     border: none; 
     border-radius: 4px; 
-    color : black;
+    color: white;
 }
 
 input[type="password"] {
@@ -27,7 +27,7 @@ input[type="password"] {
     margin: 10px 0;
     border: none; 
     border-radius: 4px; 
-    color : black;
+    color: white;
 }
 
 button {
