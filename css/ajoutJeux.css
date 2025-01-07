@@ -38,3 +38,8 @@
 {        
     transform: scale(1.05); 
 }
+#top
+{
+    margin-inline: 5%;
+    margin-bottom: 1%;
+}

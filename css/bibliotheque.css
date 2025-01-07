@@ -30,7 +30,10 @@ h2, p#textCliquerSurJeu
     margin-left : 5%;
 }
 
-
+#top
+{
+    margin-left : 50px;
+}
 #gamesDisplayArea
 { 
     margin-inline: 5%;
