@@ -21,7 +21,12 @@
 
     <div id="#gamesDisplayArea">
 
-        <?php //displayLibraryGames() ?>
+        <?php 
+        foreach($gamesList as $aGame){
+            ?>
+            
+        <?php }
+        ?>
 
     </div>
 

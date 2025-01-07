@@ -31,8 +31,12 @@ class Model{
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         $liste=array();
-        //TODO faire la boucle qui créer un objet et la renvoie la liste
+
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            array_push($liste, new Jeu($row['NomJeu'], $row['CreateurJeu'], $row['DateSortie'], $row['PlateformeJeu'], $row['DescJeu'], $row['CouvertureJeu'], $row['URLSite']));
+        }
         return $liste;
+
     }
 
     public function getInfoUtilisateur($id){
