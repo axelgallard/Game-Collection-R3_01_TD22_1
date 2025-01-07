@@ -2,6 +2,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/footer.css">
         <title>Ajout Formulaire</title>
     </head>
     <body>
@@ -58,5 +59,5 @@
             <input type="hidden" id="AjoutForm" name="AjoutForm" value="AjoutForm">
             <input type="hidden" id="page" name="page" value="listeJeux">
         </form>
-
+        <?php require_once('footer.php') ?>
     </body>
