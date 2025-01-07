@@ -52,6 +52,7 @@ class Model{
         $stmt->execute();
         return $stmt;
     }
+
     public function ajoutForm($plateformes){
         $stmt=$this->db->prepare("INSERT INTO jeu(NomJeu, CreateurJeu, PlatformeJeu, DescJeu, DateSortie, CouvertureJeu, URLSite) 
         VALUES(:Nom, :Editeur, ".$plateformes.", :Desc ".$_POST['Sortie du jeu'].", :Couv, :URL )");
@@ -68,6 +69,7 @@ class Model{
         
         $stmt2->bindParam(':Nom', $_POST['Nom du jeu']);
         $stmt2->execute();
+
     }
     public function addresseMailLibre($mail){
         $stmt=$this->db->prepare("SELECT IdUti FROM utilisateur WHERE EmailUti LIKE :mail;");
