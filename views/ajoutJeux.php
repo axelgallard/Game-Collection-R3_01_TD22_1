@@ -24,14 +24,28 @@
                 foreach($gamesList as $aGame){
                     ?>
                     <div class="aGame" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url('<?php echo $aGame->getUrlCover() ?>');">
-                        <form action="" method="POST">
-                            <h3><?php echo $aGame->getNomJeu() ?></h3>
-                            <p id="plateforme"><?php echo $aGame->getPlateformes() ?></p>
-                            <button type="submit">Ajouter a la bibliothèque</button>
+    
+                        <h3><?php echo $aGame->getNomJeu() ?></h3>
+                        <p id="plateforme"><?php echo $aGame->getPlateformes() ?></p>
+                        <?php 
+                        $present = false;
+                        
+                        foreach($userGamesList as $oneGame){ /*Ce foreach permet de verifier si l'utilisateur possèdent deja le jeu ou non*/ 
+                            if($oneGame->getNomJeu() == $aGame->getNomJeu()){
+                                $present = true;
+                            }
+                        }
+                        
+                        if (!$present) { ?>
+                            <form action="" method="POST">
+                                <button type="submit">Ajouter a la bibliothèque</button>
 
-                            <input type="hidden" id="ajoutjeu" name="ajoutjeu" value="<?php echo $aGame->getNomJeu() ?>">
-                            <input type="hidden" id="page" name="page" value="listeJeux">
-                        </form>
+                                <input type="hidden" id="ajoutjeu" name="ajoutjeu" value="<?php echo $aGame->getNomJeu() ?>">
+                                <input type="hidden" id="page" name="page" value="listeJeux">
+                            </form>
+                        <?php 
+                        } 
+                        ?>
                     </div>
                 <?php 
                 }
@@ -44,7 +58,4 @@
         </form>
 
         </div>
-
-        
-        
     </body>

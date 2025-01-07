@@ -62,11 +62,13 @@ class Controller{
 
     public function ajoutJeuRecherche($GameName) {
         $gamesList = $this->model->getLstJeuxByName($GameName);
+        $userGamesList = $this->model->getListeJeuByID($_SESSION['id']);
         include 'views/ajoutJeux.php';
     }
 
     public function ajoutJeu() {
         $gamesList = $this->model->getLstJeux();
+        $userGamesList = $this->model->getListeJeuByID($_SESSION['id']);
         include 'views/ajoutJeux.php';
     }
 
