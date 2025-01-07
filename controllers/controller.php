@@ -29,7 +29,7 @@ class Controller{
 
     public function bibliotheque() {
         $gamesList = $this->model->getListeJeuByID($_SESSION['id']);
-        var_dump($gamesList);
+        $prenom = $_SESSION['user']->getPrenomUti();
         include 'views/bibliotheque.php'; 
     }
 
@@ -51,7 +51,13 @@ class Controller{
         include 'views/classement.php';
     }
 
+    public function ajoutJeuRecherche($GameName) {
+        $gamesList = $this->model->getLstJeuxByName($GameName);
+        include 'views/ajoutJeux.php';
+    }
+
     public function ajoutJeu() {
+        $gamesList = $this->model->getLstJeux();
         include 'views/ajoutJeux.php';
     }
 }

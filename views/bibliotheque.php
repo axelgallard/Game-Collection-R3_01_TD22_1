@@ -11,7 +11,7 @@
     <?php require_once('navBar.php') ?>
 
     <div id="zoneImg">
-        <h1>Salut <?php // echo $prenom ?> ! <br>
+        <h1>Salut <?php echo $prenom ?> ! <br>
         PRÊT À AJOUTER DES JEUX A TA COLLECTION ?
         </h1>
     </div>
@@ -24,7 +24,11 @@
         <?php 
         foreach($gamesList as $aGame){
             ?>
-            
+            <div class="game" style="background-image: url('<?php echo $aGame->getUrlCover() ?>')">
+                <h3><?php echo $aGame->getNomJeu() ?></h3>
+                <p id="plateforme"><?php echo $aGame->getPlateformes() ?></p>
+                <p id="tempsJeu"><?php echo $aGame->getTempsJeu() ?></p>
+            </div>
         <?php }
         ?>
 

@@ -40,10 +40,10 @@
 
                 <p><input type="checkbox" id="Mobile" name="Mobile">Mobile</p>
             </div>
-            <input type="hidden" id="AjoutJeu" name="AjoutJeu" value="AjoutJeu">
-            <input type="hidden" id="page" name="page" value="listeJeux">
+            <input type="hidden" id="AjoutForm" name="AjoutForm" value="AjoutForm">
+            <input type="hidden" id="page" name="page" value="bibliotheque">
 
-            <!-- Crée un $_POST['Error'] qui permet de d'afficher une erreur si on revien directment sur cette page-->
+            <!-- Crée un $_POST['Error'] qui permet de d'afficher une erreur si on revien directement sur cette page-->
             <input type="hidden" id="Error" name="Error" value="Error"> 
             
             <!-- Pas fini-->

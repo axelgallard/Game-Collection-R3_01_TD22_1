@@ -1,11 +1,12 @@
 <?php
-	session_start();
+	
 	//var_dump($_SESSION);
 	//var_dump($_POST);
 	require_once 'vendor/autoload.php';
 	include 'models/model.php';
 	include 'controllers/controller.php';
-
+	session_start();
+	
 	if (isset($_POST["deco"])){
 		unset($_SESSION["id"]);
 	}
@@ -27,9 +28,15 @@
 			$controller->bibliotheque();
 		} else if ($_POST["page"]=="classement"){
 			$controller->classement();
-		}
-		else if($_POST["page"]=="listeJeux"){
-			if($_POST["AjoutJeu"]=="AjoutJeu"){
+		} else if  ($_POST["page"]=="ajoutJeu"){
+			if(isset($_POST["Recherche"])){
+				$controller->ajoutJeuRecherche($_POST['Recherche']);
+			}
+			else{
+				$controller->ajoutJeu();
+			}						
+		} else if($_POST["page"]=="listeJeux"){
+			if(isset($_POST["AjoutForm"])){
 				if($_POST["PC"]==false && $_POST["Xbox"]==false && $_POST["Playstation"]==false && $_POST["Nintendo"]==false && $_POST["Mobile"]==false){
 					echo 'ERREUR FDP';
 					$controller->ajoutFormError();

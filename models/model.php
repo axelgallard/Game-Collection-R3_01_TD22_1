@@ -31,9 +31,8 @@ class Model{
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         $liste=array();
-
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-            array_push($liste, new Jeu($row['NomJeu'], $row['CreateurJeu'], $row['DateSortie'], $row['PlateformeJeu'], $row['DescJeu'], $row['CouvertureJeu'], $row['URLSite']));
+            array_push($liste, new Jeu($row['NomJeu'], $row['CreateurJeu'], $row['DateSortie'], $row['PlateformeJeu'], $row['DescJeu'], $row['CouvertureJeu'], $row['URLSite'], $row['TempsJeu']));
         }
         return $liste;
 
@@ -50,7 +49,22 @@ class Model{
     public function getLstJeux(){
         $stmt=$this->db->prepare("SELECT * FROM jeu");
         $stmt->execute();
-        return $stmt;
+        $liste=array();
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            array_push($liste, new Jeu($row['NomJeu'], $row['CreateurJeu'], $row['DateSortie'], $row['PlateformeJeu'], $row['DescJeu'], $row['CouvertureJeu'], $row['URLSite'], 0));
+        }
+        return $liste;
+    }
+
+    public function getLstJeuxByName($GameName){
+        $stmt=$this->db->prepare("SELECT * FROM jeu WHERE NomJeu LIKE :Nom");
+        $stmt->bindParam(':Nom', $GameName);
+        $stmt->execute();
+        $liste=array();
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            array_push($liste, new Jeu($row['NomJeu'], $row['CreateurJeu'], $row['DateSortie'], $row['PlateformeJeu'], $row['DescJeu'], $row['CouvertureJeu'], $row['URLSite'], 0));
+        }
+        return $liste;
     }
 
     public function ajoutForm($plateformes){
@@ -136,7 +150,7 @@ class User{
         return $this->emailUti;
     }
     public function getIdUti(){
-        return $this->emailUti;
+        return $this->idUti;
     }
 
 }
@@ -150,8 +164,9 @@ class Jeu{
     private $descriptionJeu;
     private $urlCover;
     private $urlSite;
+    private $tempsJeu;
 
-    public function __construct($nomJeu, $editeurJeu, $dateSortieJeu, $plateformes, $descriptionJeu, $urlCover, $urlSite) {
+    public function __construct($nomJeu, $editeurJeu, $dateSortieJeu, $plateformes, $descriptionJeu, $urlCover, $urlSite, $tempsJeu) {
         $this->nomJeu = $nomJeu;
         $this->editeurJeu = $editeurJeu;
         $this->dateSortieJeu = $dateSortieJeu;
@@ -159,6 +174,7 @@ class Jeu{
         $this->descriptionJeu = $descriptionJeu;
         $this->urlCover = $urlCover;
         $this->urlSite = $urlSite;
+        $this->tempsJeu = $tempsJeu;
     }
 
     public function getNomJeu()
@@ -194,6 +210,11 @@ class Jeu{
     public function getUrlSite()
     {
         return $this->urlSite;
+    }
+
+    public function getTempsJeu()
+    {
+        return $this->tempsJeu;
     }
 }
 
