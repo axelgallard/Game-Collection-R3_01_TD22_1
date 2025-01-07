@@ -19,7 +19,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/connexion.css">
-        <link rel="stylesheet" href="css/footer.css">
         <title>Connexion</title>
     </head>
 
@@ -34,7 +33,7 @@
                 <p>E-Mail :</p>
                 <input name="mail" id="mail" type="text" placeholder="E-Mail">
                 <p>Mot de passe :</p>
-                <input name="mdp" id="mdp" type="password" placeholder="MDP">
+                <input name="mdp" id="mdp" type="text" placeholder="MDP">
                 <input type="hidden" id="page" name="page" value="connection">
                 <button type="submit" class="connection-button">Se connecter</button>
             </form>
@@ -43,6 +42,6 @@
                 <button type="submit" class="inscription-button">S'inscrire</button>
             </form>
         </div>
-        <?php require_once('footer.php') ?>
+        <!-- TODO faire le footer-->
     </body>
 </html>

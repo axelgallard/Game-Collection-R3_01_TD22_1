@@ -1,7 +1,4 @@
 <?php
-	
-	//var_dump($_SESSION);
-	//var_dump($_POST);
 	require_once 'vendor/autoload.php';
 	include 'models/model.php';
 	include 'controllers/controller.php';
