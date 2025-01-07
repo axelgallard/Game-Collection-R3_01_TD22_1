@@ -33,7 +33,7 @@
                     <input type="hidden" id="page" name="page" value="ModifJeu">
                     <button type="submit" id="nomJeu"><h3><?php echo $aGame->getNomJeu() ?></h3></button>
                 </form>
-                <p id="tempsJeu"><?php echo $aGame->getTempsJeu() ?></p>
+                <p id="tempsJeu"><?php echo $aGame->getTempsJeu() ?> h</p>
                 <p id="plateforme"><?php echo $aGame->getPlateformes() ?></p>
 
             </div>
