@@ -38,6 +38,14 @@ class Controller{
         include 'views/listeJeux.php';
     }
 
+    public function ajoutFormError() {
+        include 'views/ajoutJeux.php';
+    }
+
+    public function ajoutForm($platforme) {
+        $this->model->ajoutForm($platforme);
+    }
+
     public function ajoutJeu() {
         include 'views/ajoutJeux.php';
     }

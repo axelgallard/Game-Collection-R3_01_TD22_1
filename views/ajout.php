@@ -12,5 +12,5 @@
         <form action="" method="POST">
             <input type="text" id="Recherche" name="Recherche" value="" placeholder="Rechercher un jeu" require>
 
-            
-
+            <button type="submit"></button>
+        </form>
