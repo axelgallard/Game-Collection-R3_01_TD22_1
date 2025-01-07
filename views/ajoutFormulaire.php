@@ -48,7 +48,7 @@
             <button type="submit">Ajouter le jeu</button>
 
             <input type="hidden" id="AjoutForm" name="AjoutForm" value="AjoutForm">
-            <input type="hidden" id="page" name="page" value="listJeux">
+            <input type="hidden" id="page" name="page" value="listeJeux">
         </form>
 
     </body>

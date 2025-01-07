@@ -34,8 +34,8 @@
 			$controller->bibliotheque();
 		} else if ($_POST["page"]=="classement"){
 			$controller->classement();
-		} else if  ($_POST["page"]=="listeJeux"){
-			if(isset($_POST["Recherche"])){
+		} else if ($_POST["page"]=="listeJeux"){
+			if(isset($_POST["Recherche"]) AND $_POST["Recherche"] != ''){
 				$controller->ajoutJeuRecherche($_POST['Recherche']);
 			}					
 			else if(isset($_POST["AjoutForm"])){
@@ -65,8 +65,11 @@
 						$platforme = $platforme + "Mobile";
 					}
 
-					$controller->ajoutForm($platforme);
+					$controller->ajoutForm($platforme, $_POST['Nom du jeu']);
 				}
+			}
+			else if(isset($_POST['ajoutjeu'])){
+				$controller->ajoutJeuBibli($_POST['ajoutjeu']);
 			}
 			else{
 				$controller->ajoutJeu();

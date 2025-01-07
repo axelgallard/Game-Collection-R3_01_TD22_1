@@ -13,21 +13,25 @@
             <input type="text" id="Recherche" name="Recherche" value="" placeholder="Rechercher un jeu" require>
 
             <button type="submit">Rechercher</button>
+            <input type="hidden" id="page" name="page" value="listeJeux">
         </form>
 
         <h2>Resultats de la recherche</h2>
-        <form action="">
             <?php 
                 foreach($gamesList as $aGame){
                     ?>
                     <div class="game" style="background-image: url('<?php echo $aGame->getUrlCover() ?>')">
-                        <h3><?php echo $aGame->getNomJeu() ?></h3>
-                        <p id="plateforme"><?php echo $aGame->getPlateformes() ?></p>
-                        <button type="submit">Ajouter a la bibliothèque</button>
+                        <form action="" method="POST">
+                            <h3><?php echo $aGame->getNomJeu() ?></h3>
+                            <p id="plateforme"><?php echo $aGame->getPlateformes() ?></p>
+                            <button type="submit">Ajouter a la bibliothèque</button>
+
+                            <input type="hidden" id="ajoutjeu" name="ajoutjeu" value="<?php echo $aGame->getNomJeu() ?>">
+                            <input type="hidden" id="page" name="page" value="listeJeux">
+                        </form>
                     </div>
                 <?php 
                 }
             ?>
-        </form>
         
     </body>

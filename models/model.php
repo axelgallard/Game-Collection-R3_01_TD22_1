@@ -85,6 +85,15 @@ class Model{
         $stmt2->execute();
     }
 
+    public function ajoutJeuBibli($jeu){
+        $stmt=$this->db->prepare("INSERT INTO bibliotheque (IdUti, NomJeu) VALUES (:id, :Nom)");
+        
+        $stmt->bindParam(':Nom', $jeu);
+        $stmt->bindParam(':id', $_SESSION['id']);
+
+        $stmt->execute();
+    }
+
     public function addresseMailLibre($mail){
         $stmt=$this->db->prepare("SELECT IdUti FROM utilisateur WHERE EmailUti LIKE :mail;");
         $stmt->bindParam(':mail', $mail);
