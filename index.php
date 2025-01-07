@@ -6,8 +6,7 @@
 	include 'models/model.php';
 	include 'controllers/controller.php';
 	session_start();
-
-	var_dump($_SESSION['user']);
+	
 	if (isset($_POST["deco"])){
 		unset($_SESSION["id"]);
 	}
