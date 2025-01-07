@@ -16,6 +16,24 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombre */
 }
 
+input[type="text"] {
+    width: 100%; /* Largeur à 100% */
+    padding: 10px; /* Espacement interne */
+    margin: 10px 0; /* Espacement entre les champs */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    color : black;
+}
+
+input[type="password"] {
+    width: 100%; /* Largeur à 100% */
+    padding: 10px; /* Espacement interne */
+    margin: 10px 0; /* Espacement entre les champs */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    color : black;
+}
+
 button {
     background-color: #6C56D4; /* Couleur du bouton */
     color: white; /* Couleur du texte du bouton */

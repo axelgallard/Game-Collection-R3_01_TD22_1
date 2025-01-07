@@ -26,7 +26,7 @@
 			if (!isset($_SESSION["id"])){
 				$controller->connection();
 			}else{
-				$controller->index();	
+				$controller->bibliotheque();	
 			}
 		}else if ($_POST["page"]=="inscription"){
 			$controller->inscription();
@@ -82,9 +82,9 @@
 				$controller->ajoutJeu();
 			}			
 		}else{
-			$controller->index();
+			$controller->bibliotheque();	
 		}
 	}else{
-		$controller->index();
+		$controller->connection();
 	}
 ?>
