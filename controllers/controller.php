@@ -29,6 +29,7 @@ class Controller{
 
     public function bibliotheque() {
         $gamesList = $this->model->getListeJeuByID($_SESSION['id']);
+        $prenom = $_SESSION['user']->getPrenomUti();
         include 'views/bibliotheque.php'; 
     }
 

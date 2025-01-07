@@ -1,11 +1,13 @@
 <?php
-	session_start();
+	
 	//var_dump($_SESSION);
 	//var_dump($_POST);
 	require_once 'vendor/autoload.php';
 	include 'models/model.php';
 	include 'controllers/controller.php';
+	session_start();
 
+	var_dump($_SESSION['user']);
 	if (isset($_POST["deco"])){
 		unset($_SESSION["id"]);
 	}

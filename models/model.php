@@ -128,7 +128,7 @@ class User{
         return $this->emailUti;
     }
     public function getIdUti(){
-        return $this->emailUti;
+        return $this->idUti;
     }
     
 

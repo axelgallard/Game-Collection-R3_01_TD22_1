@@ -11,7 +11,7 @@
     <?php require_once('navBar.php') ?>
 
     <div id="zoneImg">
-        <h1>Salut <?php // echo $prenom ?> ! <br>
+        <h1>Salut <?php echo $prenom ?> ! <br>
         PRÊT À AJOUTER DES JEUX A TA COLLECTION ?
         </h1>
     </div>
