@@ -2,15 +2,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/modifJeu.css">
+        <link rel="stylesheet" href="css/footer.css">
         <title>Modifier un jeu</title>
     </head>
     <body>
         <!-- NAVBAR -->
         <?php require_once('navBar.php') ?>
         <!--        -->
-        <h1><?php echo $jeu->getNomJeu() ?></h1>
-        <p><?php echo $jeu->getDescriptionJeu() ?></p>
-        <p>Temps passé : <?php echo $jeu->getTempsJeu() ?> h</p>
+        <div id="infosJeu">
+            <h1><?php echo $jeu->getNomJeu() ?></h1>
+            <p><?php echo $jeu->getDescriptionJeu() ?></p>
+            <p>Temps passé : <?php echo $jeu->getTempsJeu() ?> h</p>
+        </div>
 
         <h2>Ajouter du temps passé sur le jeu</h2>
         
@@ -32,5 +36,5 @@
             <input type="hidden" id="SupBibli" name="SupBibli" value="">
             <input type="hidden" id="page" name="page" value="ModifJeu">
         </form>
-        
+        <?php require_once('footer.php') ?>
     </body>
