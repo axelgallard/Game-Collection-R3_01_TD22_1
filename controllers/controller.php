@@ -33,6 +33,12 @@ class Controller{
         include 'views/bibliotheque.php'; 
     }
 
+    public function ajoutJeuBibli($jeu){
+        $this->model->ajoutJeuBibli($jeu);
+
+        $this->ajoutJeu();
+    }
+
     public function ajoutFormError() {
         include 'views/ajoutJeux.php';
     }
@@ -57,5 +63,6 @@ class Controller{
         $gamesList = $this->model->getLstJeux();
         include 'views/ajoutJeux.php';
     }
+
 }
 ?>

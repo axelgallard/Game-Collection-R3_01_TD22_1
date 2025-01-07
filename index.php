@@ -29,7 +29,7 @@
 		} else if ($_POST["page"]=="classement"){
 			$controller->classement();
 		} else if  ($_POST["page"]=="listeJeux"){
-			if(isset($_POST["Recherche"])){
+			if(isset($_POST["Recherche"]) AND $_POST["Recherche"] != ''){
 				$controller->ajoutJeuRecherche($_POST['Recherche']);
 			}					
 			else if(isset($_POST["AjoutForm"])){
@@ -61,6 +61,9 @@
 
 					$controller->ajoutForm($platforme);
 				}
+			}
+			else if(isset($_POST['ajoutjeu'])){
+				$controller->ajoutJeuBibli($_POST['ajoutjeu']);
 			}
 			else{
 				$controller->ajoutJeu();
