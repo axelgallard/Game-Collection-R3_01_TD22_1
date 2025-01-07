@@ -81,11 +81,11 @@ class Model{
     }
 
     public function infoJeu($jeu) {
-        $stmt=$this->db->prepare("SELECT * FROM jeu WHERE NomJeu LIKE :jeu");
+        $stmt=$this->db->prepare("SELECT * FROM bibliotheque INNER JOIN JEU ON bibliotheque.NomJeu=jeu.NomJeu WHERE NomJeu LIKE :jeu AND IdUti = ".$_SESSION['id']."");
         $stmt->bindParam(':jeu', $jeu);
         $stmt->execute();
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        return new Jeu($row['NomJeu'], $row['CreateurJeu'], $row['DateSortie'], $row['PlateformeJeu'], $row['DescJeu'], $row['CouvertureJeu'], $row['URLSite'], 0);
+        return new Jeu($row['NomJeu'], $row['CreateurJeu'], $row['DateSortie'], $row['PlateformeJeu'], $row['DescJeu'], $row['CouvertureJeu'], $row['URLSite'], $row['TempsJeu']);
     }
 
     public function ajoutJeuBibli($jeu){
