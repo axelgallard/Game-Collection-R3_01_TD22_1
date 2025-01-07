@@ -9,11 +9,13 @@
         $model->supprimeUti($_SESSION['id']);
         unset($_SESSION['id']);
         unset($_SESSION['user']);
+        header("Refresh:0");
     }
 
     if (isset($_POST['deconnection'])){
         unset($_SESSION['id']);
         unset($_SESSION['user']);
+        header("Refresh:0");
     }
 
     $blockageMDP=false;
