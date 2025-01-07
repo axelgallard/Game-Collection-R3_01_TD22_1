@@ -49,7 +49,22 @@ class Model{
     public function getLstJeux(){
         $stmt=$this->db->prepare("SELECT * FROM jeu");
         $stmt->execute();
-        return $stmt;
+        $liste=array();
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            array_push($liste, new Jeu($row['NomJeu'], $row['CreateurJeu'], $row['DateSortie'], $row['PlateformeJeu'], $row['DescJeu'], $row['CouvertureJeu'], $row['URLSite'], 0));
+        }
+        return $liste;
+    }
+
+    public function getLstJeuxByName($GameName){
+        $stmt=$this->db->prepare("SELECT * FROM jeu WHERE NomJeu LIKE :Nom");
+        $stmt->bindParam(':Nom', $GameName);
+        $stmt->execute();
+        $liste=array();
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+            array_push($liste, new Jeu($row['NomJeu'], $row['CreateurJeu'], $row['DateSortie'], $row['PlateformeJeu'], $row['DescJeu'], $row['CouvertureJeu'], $row['URLSite'], 0));
+        }
+        return $liste;
     }
 
     public function ajoutForm($plateformes){
