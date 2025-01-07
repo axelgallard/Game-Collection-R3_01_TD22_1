@@ -57,7 +57,8 @@ class Model{
     }
 
     public function getLstJeuxByName($GameName){
-        $stmt=$this->db->prepare("SELECT * FROM jeu WHERE NomJeu LIKE '%:Nom%'");
+        $stmt=$this->db->prepare("SELECT * FROM jeu WHERE NomJeu LIKE :Nom");
+        $GameName = '%'.$GameName.'%';
         $stmt->bindParam(':Nom', $GameName);
         $stmt->execute();
         $liste=array();
