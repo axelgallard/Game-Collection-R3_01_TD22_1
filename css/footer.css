@@ -1,12 +1,14 @@
 footer {
     position: fixed;
-    bottom: 0;
-    width: 100%;
+    width: 25%;
     text-align: center;
     color: white;
     padding: 10px 0;
+    bottom: 10px;
+    left: 50%; 
+    transform: translateX(-50%);
   }
   
-  footer p {
+  footer p {  
     margin: 0;
   }
