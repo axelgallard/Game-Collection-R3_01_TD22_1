@@ -17,13 +17,15 @@ class Model{
         $stmt=$this->db->prepare("SELECT IdUti, MDPUti FROM utilisateur WHERE EmailUti LIKE :mail;");
         $stmt->bindParam(':mail', $mail);
         $stmt->execute();
-        $result=$stmt->fetch(PDO::FETCH_ASSOC);
-        $mdpUti=$result['MDPUti'];
-        if(password_verify($mdp, $mdpUti)){
-            return $result['IdUti'];
-        }else{
-            return -1;
+        if ($stmt->rowCount() > 0){
+            $result=$stmt->fetch(PDO::FETCH_ASSOC);
+        
+            $mdpUti=$result['MDPUti'];
+            if(password_verify($mdp, $mdpUti)){
+                return $result['IdUti'];
+            }
         }
+        return -1;
     }
     
     public function getListeJeuByID($id){

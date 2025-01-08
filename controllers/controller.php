@@ -14,7 +14,11 @@ class Controller{
 
     public function connection() {
         $model=$this->model;
-        include 'views/connexion.php';
+        if (isset($_SESSION['id'])){
+            include 'views/profil.php'; 
+        }else{
+            include 'views/connexion.php';
+        }
     }
 
     public function inscription(){

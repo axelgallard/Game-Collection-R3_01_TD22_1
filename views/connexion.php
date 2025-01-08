@@ -1,5 +1,6 @@
 <?php
     $errorMessage = "";
+
     if (isset($_POST['mail']) && isset($_POST['mdp'])){
         $id=$model->getId($_POST['mail'],$_POST['mdp']);
         if ($id==-1){
@@ -7,9 +8,10 @@
             $errorMessage = "Erreur : mot de passe ou e-mail incorrecte";
         }else{
             $_SESSION['id']=$id;
-            $_SESSION['user'] = new User($id);            
+            $_SESSION['user'] = new User($id);
+            header("Refresh:0");
         }
-        header("Refresh:0");
+        
     
     }
 ?>
@@ -31,9 +33,9 @@
             <?php } ?>
             <form method="POST">
                 <p>E-Mail :</p>
-                <input name="mail" id="mail" type="text" placeholder="E-Mail">
+                <input name="mail" id="mail" type="text" placeholder="E-Mail" required>
                 <p>Mot de passe :</p>
-                <input name="mdp" id="mdp" type="text" placeholder="MDP">
+                <input name="mdp" id="mdp" type="password" placeholder="MDP" required>
                 <input type="hidden" id="page" name="page" value="connection">
                 <button type="submit" class="connection-button">Se connecter</button>
             </form>

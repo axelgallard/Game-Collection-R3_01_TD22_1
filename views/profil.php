@@ -1,6 +1,6 @@
 <?php
     if (!isset($_SESSION['id'])){
-        $_POST['page']="index";
+        $_POST['page']="connection";
         header("Refresh:0");
     }
     $infos=$model->getInfoUtilisateur($_SESSION['id']);
